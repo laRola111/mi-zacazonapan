@@ -188,7 +188,7 @@ export default function Hero() {
             {/* Styled to resemble premium food photography with high shadows */}
             <div className="w-full h-full rounded-full overflow-hidden border-[8px] double border-mexican-gold shadow-[0_20px_50px_rgba(0,0,0,0.9)] relative bg-[#120e0b]">
               <img
-                src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop"
+                src="/images/tacos.png"
                 alt="Deliciosos Tacos de Mi Zacazonapan — Handmade Tortillas"
                 loading="lazy"
                 decoding="async"

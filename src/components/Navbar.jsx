@@ -75,9 +75,12 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
             className="flex items-center gap-2 group cursor-pointer"
             aria-label="Mi Zacazonapan — Inicio"
           >
-            <div className="relative w-10 h-10 bg-mexican-red rounded-full flex items-center justify-center border border-mexican-gold/80 shadow-[0_0_10px_rgba(197,30,30,0.5)] group-hover:scale-105 transition-transform duration-300">
-              <Flame className="w-6 h-6 text-mexican-gold animate-pulse" />
-              <div className="absolute -inset-0.5 border border-dashed border-mexican-gold/30 rounded-full animate-[spin_20s_linear_infinite]" />
+            <div className="relative w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <img
+                src="/images/logo.png"
+                alt="Mi Zacazonapan Logo"
+                className="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(244,196,48,0.5)]"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-western text-lg tracking-wider text-mexican-gold uppercase leading-tight">
