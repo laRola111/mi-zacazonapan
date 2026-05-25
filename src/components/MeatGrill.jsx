@@ -90,7 +90,7 @@ export default function MeatGrill() {
             {/* Column header */}
             <div className="bg-[#E31B23]/90 px-5 py-3 border-b border-[#F9E014]/40 flex items-center gap-2">
               <Flame className="w-4 h-4 text-[#F9E014]" />
-              <span className="font-condensed text-[#F9E014] text-xs uppercase tracking-[0.2em]">
+              <span className="font-oswald text-[#F9E014] text-xs uppercase tracking-[0.2em]">
                 {lang === "es" ? "Tipos de Carne" : "Meat Options"}
               </span>
             </div>
@@ -105,7 +105,7 @@ export default function MeatGrill() {
               >
                 <span className="text-xl shrink-0">{meat.icon}</span>
                 <div className="flex-1">
-                  <p className="font-condensed text-[#F9E014] text-sm uppercase tracking-wide leading-tight">
+                  <p className="font-oswald text-[#F9E014] text-sm uppercase tracking-wide leading-tight">
                     {lang === "en" && meat.nameEn ? meat.nameEn : meat.name}
                   </p>
                   <p className="font-condensed text-[#F8F1E5]/45 text-[11px] tracking-wide">
@@ -122,7 +122,7 @@ export default function MeatGrill() {
             {/* Column header */}
             <div className="bg-[#E31B23]/90 px-5 py-3 border-b border-[#F9E014]/40 flex items-center gap-2">
               <Flame className="w-4 h-4 text-[#F9E014]" />
-              <span className="font-condensed text-[#F9E014] text-xs uppercase tracking-[0.2em]">
+              <span className="font-oswald text-[#F9E014] text-xs uppercase tracking-[0.2em]">
                 {lang === "es" ? "Más Opciones" : "More Options"}
               </span>
             </div>
@@ -137,7 +137,7 @@ export default function MeatGrill() {
               >
                 <span className="text-xl shrink-0">{meat.icon}</span>
                 <div className="flex-1">
-                  <p className="font-condensed text-[#F9E014] text-sm uppercase tracking-wide leading-tight">
+                  <p className="font-oswald text-[#F9E014] text-sm uppercase tracking-wide leading-tight">
                     {lang === "en" && meat.nameEn ? meat.nameEn : meat.name}
                   </p>
                   <p className="font-condensed text-[#F8F1E5]/45 text-[11px] tracking-wide">
