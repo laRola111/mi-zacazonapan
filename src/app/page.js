@@ -1,65 +1,183 @@
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import MenuSection from "../components/MenuSection";
+import MeatGrill from "../components/MeatGrill";
+import HandmadeTortillas from "../components/HandmadeTortillas";
+import Contact from "../components/Contact";
+import CartDrawer from "../components/CartDrawer";
+import { Flame, Heart } from "lucide-react";
 
 export default function Home() {
+  const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("inicio");
+
+  // Track active section for scrollspy Navbar indicator
+  useEffect(() => {
+    const sections = ["inicio", "breakfast", "tacos", "specialties", "barbacoa", "carnes", "tortillas", "contacto"];
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: "-25% 0px -55% 0px", // Focus middle of viewport
+      threshold: 0
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Cart Handlers
+  const handleAddItem = (item) => {
+    setCart((prevCart) => {
+      // Find if exact item with same custom configuration already exists
+      const existingIdx = prevCart.findIndex(
+        (i) => i.id === item.id && i.customOptions === item.customOptions
+      );
+
+      if (existingIdx > -1) {
+        // Spread to avoid mutating state directly
+        return prevCart.map((i, idx) =>
+          idx === existingIdx ? { ...i, quantity: i.quantity + 1 } : i
+        );
+      }
+
+      return [...prevCart, { ...item, quantity: 1 }];
+    });
+    
+    // Automatically open cart drawer to give direct checkout visual cues
+    setIsCartOpen(true);
+  };
+
+  const handleUpdateQuantity = (itemId, customOptions, newQuantity) => {
+    if (newQuantity <= 0) {
+      handleRemoveItem(itemId, customOptions);
+      return;
+    }
+
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === itemId && item.customOptions === customOptions
+          ? { ...item, quantity: newQuantity }
+          : item
+      )
+    );
+  };
+
+  const handleRemoveItem = (itemId, customOptions) => {
+    setCart((prevCart) =>
+      prevCart.filter((item) => !(item.id === itemId && item.customOptions === customOptions))
+    );
+  };
+
+  const totalCartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-mexican-black flex flex-col font-sans select-none selection:bg-mexican-gold selection:text-mexican-black">
+      {/* Sticky Header Navbar */}
+      <Navbar
+        cartCount={totalCartCount}
+        onCartClick={() => setIsCartOpen(true)}
+        activeSection={activeSection}
+      />
+
+      {/* Main Content Layout */}
+      <main className="flex-grow">
+        {/* Cinematic landing hero */}
+        <Hero />
+
+        {/* Dynamic menu items (Breakfast, Tacos, Specialties, Drinks) */}
+        <div id="breakfast">
+          <MenuSection onAddItem={handleAddItem} />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        {/* Tacos section link wrapper (mapped under breakfast in the tab menu, but tracked for anchors) */}
+        <div id="tacos" className="h-1 bg-mexican-black" />
+        <div id="specialties" className="h-1 bg-mexican-black" />
+        <div id="barbacoa" className="h-1 bg-mexican-black" />
+
+        {/* Tipos de carne grill section */}
+        <MeatGrill />
+
+        {/* Handmade tortillas showcase */}
+        <HandmadeTortillas />
+
+        {/* Integrated interactive contact details & maps */}
+        <Contact />
       </main>
+
+      {/* Cart Slider Drawer Overlay */}
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cart}
+        onUpdateQuantity={handleUpdateQuantity}
+        onRemoveItem={handleRemoveItem}
+      />
+
+      {/* Custom Traditional Footer */}
+      <footer className="bg-[#050403] border-t-2 border-mexican-gold/30 text-mexican-cream py-12 relative overflow-hidden">
+        {/* Background glow ornament */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-24 bg-mexican-red/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
+          {/* Logo brand icon */}
+          <div className="flex items-center gap-2 mb-6">
+            <div className="w-8 h-8 bg-mexican-red rounded-full flex items-center justify-center border border-mexican-gold/50 shadow-md">
+              <Flame className="w-5 h-5 text-mexican-gold" />
+            </div>
+            <span className="font-western text-lg tracking-widest text-mexican-gold uppercase">
+              Mi Zacazonapan
+            </span>
+          </div>
+
+          {/* Slogans */}
+          <p className="text-center text-xs sm:text-sm font-serif italic text-mexican-cream/70 max-w-md mb-8 leading-relaxed px-4">
+            “El verdadero sabor de una auténtica taquería mexicana callejera tradicional en Austin, Texas. Hecho con orgullo y sazón familiar de generación en generación.”
+          </p>
+
+          {/* Social media placeholders */}
+          <div className="flex gap-6 mb-8 text-xs font-bold uppercase tracking-wider text-mexican-gold">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-mexican-cream transition-colors duration-200">
+              Facebook
+            </a>
+            <span className="text-[#6B3E1F]">•</span>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-mexican-cream transition-colors duration-200">
+              Instagram
+            </a>
+            <span className="text-[#6B3E1F]">•</span>
+            <a href="https://yelp.com" target="_blank" rel="noreferrer" className="hover:text-mexican-cream transition-colors duration-200">
+              Yelp
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full max-w-2xl h-[1px] bg-[#6B3E1F]/30 mb-6" />
+
+          {/* Footnotes */}
+          <div className="w-full flex flex-col sm:flex-row justify-between items-center text-[10px] text-mexican-cream/45 uppercase tracking-widest gap-4">
+            <span>© {new Date().getFullYear()} Mi Zacazonapan. Todos los derechos reservados.</span>
+            <span className="flex items-center gap-1">
+              Hecho con <Heart className="w-3 h-3 text-mexican-red fill-current" /> en Austin, TX
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

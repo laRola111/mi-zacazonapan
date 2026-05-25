@@ -1,26 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 @import "tailwindcss";
 
+@theme {
+  --color-mexican-black: #0A0A0A;
+  --color-mexican-red: #C51E1E;
+  --color-mexican-gold: #F4C430;
+  --color-mexican-orange: #E67E22;
+  --color-mexican-wood: #6B3E1F;
+  --color-mexican-cream: #F8F1E5;
+
+  --font-western: "Rye", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Outfit", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0A;
+  --foreground: #F8F1E5;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A0A0A;
+  color: #F8F1E5;
+  font-family: "Outfit", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TYPOGRAPHY — Western Vintage Outline Titles
+   ============================================================ */
+
+.mexican-title {
+  font-family: "Rye", cursive;
+  color: #F4C430;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0px #C51E1E,
+     6px  6px 8px rgba(0, 0, 0, 0.8);
+}
+
+.mexican-title-red {
+  font-family: "Rye", cursive;
+  color: #C51E1E;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0px #F4C430,
+     6px  6px 8px rgba(0, 0, 0, 0.8);
+}
+
+.mexican-title-cream {
+  font-family: "Rye", cursive;
+  color: #F8F1E5;
+  text-shadow: 
+    -2px -2px 0 #000,  
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     4px  4px 0px #C51E1E,
+     6px  6px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Western font utility for inline use */
+.font-western {
+  font-family: "Rye", cursive;
+}
+
+/* ============================================================
+   BORDERS — Gold Ornament Styles
+   ============================================================ */
+
+.gold-border {
+  border: 3px double #F4C430;
+  box-shadow: 0 0 15px rgba(244, 196, 48, 0.15), inset 0 0 15px rgba(244, 196, 48, 0.1);
+}
+
+.gold-border-thin {
+  border: 1px solid rgba(244, 196, 48, 0.35);
+  box-shadow: 0 0 8px rgba(244, 196, 48, 0.08);
+}
+
+.gold-glow-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-hover:hover {
+  border-color: #F4C430;
+  box-shadow: 0 0 20px rgba(244, 196, 48, 0.35), inset 0 0 10px rgba(244, 196, 48, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   BACKGROUNDS — Wood Panel & Gradients
+   ============================================================ */
+
+.wood-panel {
+  background-color: #120E0B;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
+    repeating-linear-gradient(rgba(107, 62, 31, 0.05) 0px, rgba(107, 62, 31, 0.05) 4px, rgba(0,0,0,0) 4px, rgba(0,0,0,0) 8px),
+    linear-gradient(90deg, rgba(107, 62, 31, 0.1), rgba(0, 0, 0, 0));
+  border: 2px solid #6B3E1F;
+}
+
+/* Radial gradient utility — fixes missing Tailwind v4 bg-gradient-radial */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* ============================================================
+   AMBIENT GLOW OVERLAYS
+   ============================================================ */
+
+.red-ambient-glow {
+  background: radial-gradient(circle at center, rgba(197, 30, 30, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+.gold-ambient-glow {
+  background: radial-gradient(circle at center, rgba(244, 196, 48, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+.orange-ambient-glow {
+  background: radial-gradient(circle at center, rgba(230, 126, 34, 0.12) 0%, rgba(10, 10, 10, 0) 70%);
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(-80px) scale(1.4) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-180px) scale(2) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.smoke-particle {
+  animation: smokeRise 6s infinite linear;
+  will-change: transform, opacity;
+}
+
+/* Optimise GPU compositing for animated spark particles */
+.spark-particle {
+  will-change: transform, opacity;
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6B3E1F;
+  border: 2px solid #0A0A0A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C51E1E;
 }
