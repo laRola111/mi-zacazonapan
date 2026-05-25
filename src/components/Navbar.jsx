@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
-import { ShoppingBag, Phone, Menu, X, Flame } from "lucide-react";
+import { ShoppingBag, Phone, Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar({ cartCount, onCartClick, activeSection }) {
+  const { t, lang, toggleLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -12,31 +14,27 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
   }, []);
 
   useEffect(() => {
-    // Passive listener for better scroll performance
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
-  // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setMobileMenuOpen(false);
-      }
+      if (window.innerWidth >= 1024) setMobileMenuOpen(false);
     };
     window.addEventListener("resize", handleResize, { passive: true });
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const navLinks = [
-    { name: "Inicio", href: "#inicio" },
-    { name: "Breakfast", href: "#breakfast" },
-    { name: "Tacos", href: "#tacos" },
-    { name: "Specialties", href: "#specialties" },
-    { name: "Barbacoa", href: "#barbacoa" },
-    { name: "Carnes", href: "#carnes" },
-    { name: "Tortillas", href: "#tortillas" },
-    { name: "Contacto", href: "#contacto" },
+    { name: t.nav.inicio, href: "#inicio" },
+    { name: t.nav.breakfast, href: "#breakfast" },
+    { name: t.nav.tacos, href: "#tacos" },
+    { name: t.nav.specialties, href: "#specialties" },
+    { name: t.nav.barbacoa, href: "#barbacoa" },
+    { name: t.nav.carnes, href: "#carnes" },
+    { name: t.nav.tortillas, href: "#tortillas" },
+    { name: t.nav.contacto, href: "#contacto" },
   ];
 
   const scrollToSection = (href) => {
@@ -55,7 +53,6 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
     scrollToSection(href);
   };
 
-  // Navbar height depends on scroll state
   const navbarHeight = scrolled ? "56px" : "72px";
 
   return (
@@ -97,10 +94,9 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
             {navLinks.map((link) => {
               const cleanId = link.href.substring(1);
               const isActive = activeSection === cleanId;
-
               return (
                 <a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
                   aria-current={isActive ? "page" : undefined}
@@ -124,13 +120,38 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
           </nav>
 
           {/* Action Buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Language Toggle Button */}
+            <motion.button
+              onClick={toggleLang}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              id="lang-toggle-btn"
+              aria-label={t.switchLabel}
+              title={t.switchLabel}
+              className="flex items-center gap-1.5 px-2.5 py-2 rounded-none border border-mexican-gold/50 text-mexican-gold hover:bg-mexican-gold/10 hover:border-mexican-gold transition-all duration-300 font-bold text-[11px] uppercase tracking-wider"
+            >
+              <Globe className="w-3.5 h-3.5 shrink-0" />
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={lang}
+                  initial={{ opacity: 0, y: -6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 6 }}
+                  transition={{ duration: 0.18 }}
+                  className="hidden sm:inline"
+                >
+                  {t.langLabel}
+                </motion.span>
+              </AnimatePresence>
+            </motion.button>
+
             {/* Call button */}
             <a
               href="tel:5129098530"
               className="hidden sm:flex items-center justify-center p-2 rounded-full border border-mexican-gold/40 text-mexican-gold hover:bg-mexican-red/20 transition-all duration-300 hover:scale-105"
-              aria-label="Llamar al restaurante"
-              title="Llamar: (512) 909-8530"
+              aria-label={t.nav.callLabel}
+              title={t.nav.callTitle}
             >
               <Phone className="w-4 h-4" />
             </a>
@@ -138,7 +159,7 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
             {/* Shopping Cart Trigger */}
             <button
               onClick={onCartClick}
-              aria-label={`Ver mi orden${cartCount > 0 ? ` (${cartCount} artículo${cartCount > 1 ? 's' : ''})` : ''}`}
+              aria-label={t.nav.cartLabel(cartCount)}
               className="relative flex items-center gap-2 bg-mexican-red hover:bg-mexican-red/90 text-mexican-cream px-3 py-2 sm:px-4 sm:py-2.5 border border-mexican-gold shadow-[0_0_12px_rgba(197,30,30,0.4)] hover:shadow-[0_0_18px_rgba(244,196,48,0.4)] transition-all duration-300 hover:scale-105 group font-bold text-xs sm:text-sm"
             >
               <div className="relative">
@@ -157,14 +178,14 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
                 </AnimatePresence>
               </div>
               <span className="hidden md:inline uppercase tracking-widest text-[10px]">
-                Mi Orden
+                {t.nav.miOrden}
               </span>
             </button>
 
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={mobileMenuOpen ? t.nav.closeMenu : t.nav.openMenu}
               aria-expanded={mobileMenuOpen}
               className="lg:hidden p-2 text-mexican-cream hover:text-mexican-gold hover:scale-105 transition-all duration-300"
             >
@@ -174,7 +195,7 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu — positioned dynamically below navbar */}
+      {/* Mobile Drawer Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -188,7 +209,7 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
             <nav className="flex flex-col p-6 gap-4" aria-label="Menú móvil">
               {navLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
                   aria-current={activeSection === link.href.substring(1) ? "page" : undefined}
@@ -201,6 +222,16 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
                   {link.name}
                 </a>
               ))}
+
+              {/* Language toggle in mobile menu */}
+              <button
+                onClick={() => { toggleLang(); setMobileMenuOpen(false); }}
+                className="flex items-center gap-2 text-mexican-gold font-bold text-sm uppercase tracking-wider border-b border-mexican-wood/30 pb-2 hover:text-mexican-cream transition-colors"
+              >
+                <Globe className="w-4 h-4" />
+                {t.switchLabel}
+              </button>
+
               <div className="flex items-center justify-between mt-2 pt-2">
                 <a
                   href="tel:5129098530"

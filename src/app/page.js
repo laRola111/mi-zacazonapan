@@ -7,9 +7,12 @@ import MeatGrill from "../components/MeatGrill";
 import HandmadeTortillas from "../components/HandmadeTortillas";
 import Contact from "../components/Contact";
 import CartDrawer from "../components/CartDrawer";
+import ExtrasBadge from "../components/ExtrasBadge";
+import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
 
 export default function Home() {
+  const { t } = useLanguage();
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
@@ -17,11 +20,11 @@ export default function Home() {
   // Track active section for scrollspy Navbar indicator
   useEffect(() => {
     const sections = ["inicio", "breakfast", "tacos", "specialties", "barbacoa", "carnes", "tortillas", "contacto"];
-    
+
     const observerOptions = {
       root: null,
-      rootMargin: "-25% 0px -55% 0px", // Focus middle of viewport
-      threshold: 0
+      rootMargin: "-25% 0px -55% 0px",
+      threshold: 0,
     };
 
     const handleIntersection = (entries) => {
@@ -45,13 +48,11 @@ export default function Home() {
   // Cart Handlers
   const handleAddItem = (item) => {
     setCart((prevCart) => {
-      // Find if exact item with same custom configuration already exists
       const existingIdx = prevCart.findIndex(
         (i) => i.id === item.id && i.customOptions === item.customOptions
       );
 
       if (existingIdx > -1) {
-        // Spread to avoid mutating state directly
         return prevCart.map((i, idx) =>
           idx === existingIdx ? { ...i, quantity: i.quantity + 1 } : i
         );
@@ -59,8 +60,7 @@ export default function Home() {
 
       return [...prevCart, { ...item, quantity: 1 }];
     });
-    
-    // Automatically open cart drawer to give direct checkout visual cues
+
     setIsCartOpen(true);
   };
 
@@ -101,12 +101,12 @@ export default function Home() {
         {/* Cinematic landing hero */}
         <Hero />
 
-        {/* Dynamic menu items (Breakfast, Tacos, Specialties, Drinks) */}
+        {/* Dynamic menu items */}
         <div id="breakfast">
           <MenuSection onAddItem={handleAddItem} />
         </div>
 
-        {/* Tacos section link wrapper (mapped under breakfast in the tab menu, but tracked for anchors) */}
+        {/* Anchor markers */}
         <div id="tacos" className="h-1 bg-mexican-black" />
         <div id="specialties" className="h-1 bg-mexican-black" />
         <div id="barbacoa" className="h-1 bg-mexican-black" />
@@ -130,6 +130,9 @@ export default function Home() {
         onRemoveItem={handleRemoveItem}
       />
 
+      {/* Floating Extras Starburst Badge */}
+      <ExtrasBadge />
+
       {/* Custom Traditional Footer */}
       <footer className="bg-[#050403] border-t-2 border-mexican-gold/30 text-mexican-cream py-12 relative overflow-hidden">
         {/* Background glow ornament */}
@@ -146,12 +149,12 @@ export default function Home() {
             </span>
           </div>
 
-          {/* Slogans */}
+          {/* Slogan */}
           <p className="text-center text-xs sm:text-sm font-serif italic text-mexican-cream/70 max-w-md mb-8 leading-relaxed px-4">
-            “El verdadero sabor de una auténtica taquería mexicana callejera tradicional en Austin, Texas. Hecho con orgullo y sazón familiar de generación en generación.”
+            {t.footer.slogan}
           </p>
 
-          {/* Social media placeholders */}
+          {/* Social links */}
           <div className="flex gap-6 mb-8 text-xs font-bold uppercase tracking-wider text-mexican-gold">
             <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-mexican-cream transition-colors duration-200">
               Facebook
@@ -171,9 +174,9 @@ export default function Home() {
 
           {/* Footnotes */}
           <div className="w-full flex flex-col sm:flex-row justify-between items-center text-[10px] text-mexican-cream/45 uppercase tracking-widest gap-4">
-            <span>© {new Date().getFullYear()} Mi Zacazonapan. Todos los derechos reservados.</span>
+            <span>{t.footer.rights(new Date().getFullYear())}</span>
             <span className="flex items-center gap-1">
-              Hecho con <Heart className="w-3 h-3 text-mexican-red fill-current" /> en Austin, TX
+              {t.footer.madeWith} <Heart className="w-3 h-3 text-mexican-red fill-current" /> {t.footer.in}
             </span>
           </div>
         </div>
