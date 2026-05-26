@@ -6,7 +6,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function AudioPlayer() {
   const { lang } = useLanguage();
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [muted, setMuted] = useState(false);
   const audioRef = useRef(null);
 
@@ -16,13 +16,21 @@ export default function AudioPlayer() {
     audioRef.current.loop = true;
     audioRef.current.volume = 0.5;
 
+    // Try immediate autoplay
+    audioRef.current.play().then(() => {
+      setIsPlaying(true);
+    }).catch((err) => {
+      console.log("Immediate autoplay blocked, waiting for user interaction...", err);
+      setIsPlaying(true); // Keep active state visually
+    });
+
     // First interaction autoplay trigger
     const handleFirstInteraction = () => {
-      if (audioRef.current) {
+      if (audioRef.current && audioRef.current.paused) {
         audioRef.current.play().then(() => {
           setIsPlaying(true);
         }).catch((err) => {
-          console.log("Autoplay blocked by browser policy:", err);
+          console.log("Playback failed on interaction:", err);
         });
       }
       window.removeEventListener("click", handleFirstInteraction);
