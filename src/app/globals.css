@@ -42,7 +42,7 @@ body {
    ============================================================ */
 
 .mexican-title {
-  font-family: "Rye", cursive;
+  font-family: "Rye", Georgia, serif;
   color: #F9E014;
   text-shadow:
     -2px -2px 0 #000,
@@ -54,7 +54,7 @@ body {
 }
 
 .mexican-title-red {
-  font-family: "Rye", cursive;
+  font-family: "Rye", Georgia, serif;
   color: #E31B23;
   text-shadow:
     -2px -2px 0 #000,
@@ -66,7 +66,7 @@ body {
 }
 
 .mexican-title-cream {
-  font-family: "Rye", cursive;
+  font-family: "Rye", Georgia, serif;
   color: #F8F1E5;
   text-shadow:
     -2px -2px 0 #000,
@@ -79,7 +79,7 @@ body {
 
 /* ── Sancreek — dish card titles ─────────────────────────── */
 .dish-title {
-  font-family: "Sancreek", cursive;
+  font-family: "Sancreek", "Smokum", Georgia, serif;
   color: #F9E014;
   letter-spacing: 0.05em;
   text-shadow:
@@ -92,19 +92,19 @@ body {
 
 /* ── Barlow Condensed — ingredient / meat lists ───────────── */
 .font-condensed {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
   font-weight: 700;
 }
 
 /* ── Oswald — Alternative condensed bold list style ───────── */
 .font-oswald {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Impact", "Arial Narrow", sans-serif;
   font-weight: 700;
 }
 
 /* ── Alfa Slab One — Contemporary ultra-bold serif style ──── */
 .font-alfa {
-  font-family: "Alfa Slab One", serif;
+  font-family: "Alfa Slab One", Georgia, serif;
   text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
@@ -114,8 +114,10 @@ body {
 }
 
 /* Western font utility for inline use */
-.font-western  { font-family: "Rye", cursive; }
-.font-display  { font-family: "Luckiest Guy", cursive; }
+.font-western  { font-family: "Rye", Georgia, serif; }
+.font-sancreek { font-family: "Sancreek", "Smokum", Georgia, serif; }
+.font-smokum   { font-family: "Smokum", Georgia, serif; }
+.font-display  { font-family: "Luckiest Guy", "Impact", sans-serif; }
 
 /* ============================================================
    SECTION HEADER BAND — replicates red header bar of menu
