@@ -72,7 +72,7 @@ export default function HandmadeTortillas() {
                     {step.icon}
                   </div>
                   <div>
-                    <h4 className="text-mexican-gold font-western uppercase text-sm tracking-wider mb-1">
+                    <h4 className="text-mexican-gold font-sancreek uppercase text-sm tracking-wider mb-1">
                       {step.title}
                     </h4>
                     <p className="text-mexican-cream/70 text-xs sm:text-sm font-sans font-light leading-relaxed">

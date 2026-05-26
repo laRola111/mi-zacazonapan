@@ -113,9 +113,22 @@ export default function MenuSection({ onAddItem }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
           >
-            {currentCategoryData.items.map((item, idx) => {
+            {/* Category header - Emphasizes brand's Western Texan-Mexican style using Sancreek */}
+            <div className="text-center mb-10">
+              <span className="font-condensed text-[#E31B23] text-[10px] sm:text-xs uppercase tracking-[0.25em] block mb-1">
+                {lang === "es" ? "CATEGORÍA" : "CATEGORY"}
+              </span>
+              <h3 
+                style={{ fontFamily: '"Sancreek", cursive' }}
+                className="text-3xl sm:text-4xl text-[#F9E014] uppercase tracking-wider drop-shadow-[1px_2px_0px_rgba(0,0,0,0.85)] inline-block border-b border-[#6B3E1F] pb-3"
+              >
+                {categories.find(c => c.id === selectedCategory)?.label}
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {currentCategoryData.items.map((item, idx) => {
               const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
               const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
 
@@ -201,6 +214,7 @@ export default function MenuSection({ onAddItem }) {
                 </motion.article>
               );
             })}
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>

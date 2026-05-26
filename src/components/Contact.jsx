@@ -44,7 +44,7 @@ export default function Contact() {
 
             {/* Quick Contact Box */}
             <div className="wood-panel p-6 sm:p-8 relative border-2 border-mexican-gold">
-              <h3 className="text-mexican-gold font-western uppercase tracking-wider text-lg mb-6 border-b border-mexican-wood/30 pb-2 flex items-center gap-2">
+              <h3 className="text-mexican-gold font-sancreek uppercase tracking-wider text-lg mb-6 border-b border-mexican-wood/30 pb-2 flex items-center gap-2">
                 {t.contact.callTitle}
               </h3>
 
@@ -103,7 +103,7 @@ export default function Contact() {
 
             {/* Hours Signboard */}
             <div className="wood-panel p-6 sm:p-8 border-2 border-[#6B3E1F] relative">
-              <h3 className="text-mexican-gold font-western uppercase tracking-wider text-lg mb-6 border-b border-mexican-wood/30 pb-2 flex items-center gap-2">
+              <h3 className="text-mexican-gold font-sancreek uppercase tracking-wider text-lg mb-6 border-b border-mexican-wood/30 pb-2 flex items-center gap-2">
                 <Clock className="w-4 h-4 text-mexican-gold" />
                 {t.contact.hoursTitle}
               </h3>
@@ -156,7 +156,7 @@ export default function Contact() {
               {/* Directions */}
               <div className="mt-4 pt-4 border-t border-mexican-wood/30 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-center sm:text-left">
-                  <h4 className="text-mexican-gold font-western uppercase text-xs sm:text-sm tracking-wider">
+                  <h4 className="text-mexican-gold font-sancreek uppercase text-xs sm:text-sm tracking-wider">
                     {t.contact.mapTitle}
                   </h4>
                   <p className="text-mexican-cream/70 text-xs font-sans mt-1">

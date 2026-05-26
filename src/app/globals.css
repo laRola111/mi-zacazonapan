@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Barlow+Condensed:wght@700;900&family=Oswald:wght@700&family=Alfa+Slab+One&family=Rye&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Barlow+Condensed:wght@700;900&family=Oswald:wght@700&family=Alfa+Slab+One&family=Rye&family=Sancreek&family=Smokum&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @import "tailwindcss";
 
@@ -14,6 +14,8 @@
   /* ── Font families ── */
   --font-western:   "Rye", cursive;
   --font-alfa:      "Alfa Slab One", serif;
+  --font-sancreek:  "Sancreek", cursive;
+  --font-smokum:    "Smokum", cursive;
   --font-display:   "Luckiest Guy", cursive;          /* dish names / festive */
   --font-condensed: "Barlow Condensed", sans-serif;   /* meats / ingredient lists */
   --font-oswald:    "Oswald", sans-serif;
@@ -75,17 +77,17 @@ body {
      6px  6px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* ── Luckiest Guy — dish card titles ─────────────────────── */
+/* ── Sancreek — dish card titles ─────────────────────────── */
 .dish-title {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Sancreek", cursive;
   color: #F9E014;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-shadow:
     -1px -1px 0 #000,
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000,
-     2px  3px 0 rgba(0, 0, 0, 0.6);
+     2px  3px 0 rgba(0, 0, 0, 0.7);
 }
 
 /* ── Barlow Condensed — ingredient / meat lists ───────────── */

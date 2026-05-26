@@ -48,7 +48,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
               <div className="px-6 py-6 border-b border-[#6B3E1F]/50 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <ShoppingBag className="w-5 h-5 text-mexican-gold" />
-                  <h2 className="text-mexican-gold font-western uppercase tracking-wider text-base sm:text-lg">
+                  <h2 className="text-mexican-gold font-sancreek uppercase tracking-wider text-base sm:text-lg">
                     {t.cart.title}
                   </h2>
                 </div>
