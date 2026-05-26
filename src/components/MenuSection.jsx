@@ -127,6 +127,29 @@ export default function MenuSection({ onAddItem }) {
               </h3>
             </div>
 
+            {selectedCategory === "drinks" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="max-w-4xl mx-auto mb-12 overflow-hidden border-4 border-double border-mexican-gold shadow-[0_15px_30px_rgba(0,0,0,0.8)] relative group bg-[#0d0c0c]"
+              >
+                <img
+                  src="/images/aguas-frescas.jpeg"
+                  alt="Aguas Frescas Naturales Mi Zacazonapan"
+                  className="w-full h-auto object-cover max-h-[360px] filter saturate-110 contrast-105 brightness-95 group-hover:scale-[1.02] transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-4 left-6 right-6 text-left hidden sm:block">
+                  <span className="font-condensed text-mexican-gold text-xs uppercase tracking-widest block mb-1">
+                    {lang === "es" ? "100% NATURALES" : "100% NATURAL"}
+                  </span>
+                  <h4 className="font-western text-mexican-cream text-2xl uppercase tracking-wider">
+                    {lang === "es" ? "Aguas Frescas Del Día" : "Fresh Daily Waters"}
+                  </h4>
+                </div>
+              </motion.div>
+            )}
+
             {/* ── ITEMS GRID (ONLY ITEMS WITH IMAGES) ── */}
             {currentCategoryData.items.filter(item => item.image).length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">

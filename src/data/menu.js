@@ -443,12 +443,12 @@ export const MENU_DATA = {
     items: [
       {
         id: "d1",
-        name: "Agua de Horchata",
-        nameEn: "Horchata",
+        name: "Agua de Horchata Tradicional",
+        nameEn: "Traditional Horchata",
         description:
-          "Agua fresca tradicional de arroz con canela y vainilla. Dulce y refrescante.",
+          "Nuestra receta de la casa. Bebida cremosa de arroz, leche y un toque de canela premium. Servida bien fría, es la compañera obligatoria para tus tacos.",
         descriptionEn:
-          "Traditional milky rice water blended with cinnamon and vanilla. Sweet and refreshing.",
+          "Traditional sweet and creamy rice water with a hint of premium cinnamon. The absolute best pairing for your tacos.",
         price: 3.50,
         image: null,
         popular: true,
@@ -458,9 +458,31 @@ export const MENU_DATA = {
         name: "Agua de Jamaica",
         nameEn: "Hibiscus Flower Tea",
         description:
-          "Té de flor de jamaica con hielo. Ácido, fresco y muy hidratante.",
+          "El clásico sabor de México. Infusión natural de flores de jamaica seleccionadas, que ofrece un balance perfecto entre un toque acidito y un dulzor refrescante.",
         descriptionEn:
-          "Iced sweet hibiscus flower tea. Tart, crisp, and thirst-quenching.",
+          "The classic taste of Mexico. Natural infusion of selected hibiscus flowers, offering a perfect balance between tart and sweet.",
+        price: 3.50,
+        image: null,
+      },
+      {
+        id: "d6",
+        name: "Agua de Naranja",
+        nameEn: "Fresh Orange Water",
+        description:
+          "Pura energía cítrica en tu vaso. Preparada con jugo de naranjas frescas exprimidas, es una opción ligera, dulce y con el punto exacto de acidez natural.",
+        descriptionEn:
+          "Pure citrus energy in your glass. Prepared with freshly squeezed orange juice, light, sweet, and perfectly refreshing.",
+        price: 3.50,
+        image: null,
+      },
+      {
+        id: "d7",
+        name: "Agua de Pepino con Limón",
+        nameEn: "Cucumber Lime Water",
+        description:
+          "La definición de frescura absoluta. Mezcla ligera y revitalizante de pepino fresco licuado con un toque de limón verde. Hidratante y perfecta.",
+        descriptionEn:
+          "The definition of absolute freshness. A light and revitalizing blend of fresh cucumber blended with a squeeze of green lime.",
         price: 3.50,
         image: null,
       },

@@ -11,6 +11,7 @@ import ExtrasBadge from "../components/ExtrasBadge";
 import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import AudioPlayer from "../components/AudioPlayer";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -199,6 +200,9 @@ export default function Home() {
 
       {/* Floating Extras Starburst Badge */}
       <ExtrasBadge />
+
+      {/* Floating Premium Background Music Player */}
+      <AudioPlayer />
 
       {/* Custom Traditional Footer */}
       <footer className="bg-[#050403] border-t-2 border-mexican-gold/30 text-mexican-cream py-12 relative overflow-hidden">
