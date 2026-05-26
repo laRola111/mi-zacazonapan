@@ -127,94 +127,166 @@ export default function MenuSection({ onAddItem }) {
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {currentCategoryData.items.map((item, idx) => {
-              const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
-              const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
+            {/* ── ITEMS GRID (ONLY ITEMS WITH IMAGES) ── */}
+            {currentCategoryData.items.filter(item => item.image).length > 0 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+                {currentCategoryData.items.filter(item => item.image).map((item, idx) => {
+                  const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
+                  const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
 
-              return (
-                <motion.article
-                  key={item.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: idx * 0.04 }}
-                  whileHover={{ y: -5 }}
-                  className="relative flex flex-col bg-[#111010] border border-[#6B3E1F]/70 hover:border-[#F9E014]/60 transition-all duration-300 group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
-                >
-                  {/* ── Image ── */}
-                  <div className="relative h-44 overflow-hidden bg-[#0d0c0c] shrink-0">
-                    <img
-                      src={item.image}
-                      alt={displayName}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover filter saturate-110 brightness-90 group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-transparent" />
+                  return (
+                    <motion.article
+                      key={item.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: idx * 0.04 }}
+                      whileHover={{ y: -5 }}
+                      className="relative flex flex-col bg-[#111010] border border-[#6B3E1F]/70 hover:border-[#F9E014]/60 transition-all duration-300 group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
+                    >
+                      {/* ── Image ── */}
+                      <div className="relative h-44 overflow-hidden bg-[#0d0c0c] shrink-0">
+                        <img
+                          src={item.image}
+                          alt={displayName}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover filter saturate-110 brightness-90 group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#111010] via-[#111010]/30 to-transparent" />
 
-                    {/* Badges */}
-                    <div className="absolute top-2 left-2 flex flex-col gap-1">
-                      {item.popular && (
-                        <span className="bg-[#F9E014] text-[#0A0A0A] font-condensed text-[9px] uppercase px-2 py-0.5 tracking-widest border border-[#0A0A0A]">
-                          ⭐ {t.menu.popular.replace("⭐ ", "")}
-                        </span>
-                      )}
-                      {item.spicy && (
-                        <span className="bg-[#E31B23] text-[#F9E014] font-condensed text-[9px] uppercase px-2 py-0.5 tracking-widest border border-[#F9E014]">
-                          🌶️ {t.menu.spicy.replace("🌶️ ", "")}
-                        </span>
-                      )}
-                    </div>
+                        {/* Badges */}
+                        <div className="absolute top-2 left-2 flex flex-col gap-1">
+                          {item.popular && (
+                            <span className="bg-[#F9E014] text-[#0A0A0A] font-condensed text-[9px] uppercase px-2 py-0.5 tracking-widest border border-[#0A0A0A]">
+                              ⭐ {t.menu.popular.replace("⭐ ", "")}
+                            </span>
+                          )}
+                          {item.spicy && (
+                            <span className="bg-[#E31B23] text-[#F9E014] font-condensed text-[9px] uppercase px-2 py-0.5 tracking-widest border border-[#F9E014]">
+                              🌶️ {t.menu.spicy.replace("🌶️ ", "")}
+                            </span>
+                          )}
+                        </div>
 
-                    {/* Price tag */}
-                    <div className="absolute bottom-2 right-2 bg-[#E31B23] border border-[#F9E014] px-2.5 py-1">
-                      <span className="font-condensed text-[#F9E014] text-sm font-black tracking-wider">
-                        ${item.price.toFixed(2)}
-                      </span>
-                    </div>
-                  </div>
+                        {/* Price tag */}
+                        <div className="absolute bottom-2 right-2 bg-[#E31B23] border border-[#F9E014] px-2.5 py-1">
+                          <span className="font-condensed text-[#F9E014] text-sm font-black tracking-wider">
+                            ${item.price.toFixed(2)}
+                          </span>
+                        </div>
+                      </div>
 
-                  {/* ── Body ── */}
-                  <div className="flex flex-col flex-1 p-4">
-                    {/* Dish name — Luckiest Guy */}
-                    <h3 className="dish-title text-lg sm:text-xl uppercase leading-tight mb-1 line-clamp-2">
-                      {displayName}
-                    </h3>
+                      {/* ── Body ── */}
+                      <div className="flex flex-col flex-1 p-4">
+                        {/* Dish name — Luckiest Guy */}
+                        <h3 className="dish-title text-lg sm:text-xl uppercase leading-tight mb-1 line-clamp-2">
+                          {displayName}
+                        </h3>
 
-                    {/* Bilingual secondary name for tacos */}
-                    {selectedCategory === "tacos" && item.nameEn && item.nameEn !== item.name && (
-                      <p className="font-condensed text-[10px] text-[#F9E014]/50 uppercase tracking-widest mb-2">
-                        {lang === "es" ? item.nameEn : item.name}
-                      </p>
-                    )}
+                        {/* Bilingual secondary name for tacos */}
+                        {selectedCategory === "tacos" && item.nameEn && item.nameEn !== item.name && (
+                          <p className="font-condensed text-[10px] text-[#F9E014]/50 uppercase tracking-widest mb-2">
+                            {lang === "es" ? item.nameEn : item.name}
+                          </p>
+                        )}
 
-                    <p className="text-[#F8F1E5]/60 text-xs font-light leading-relaxed flex-1 line-clamp-3 mb-4">
-                      {displayDesc}
-                    </p>
+                        <p className="text-[#F8F1E5]/60 text-xs font-light leading-relaxed flex-1 line-clamp-3 mb-4">
+                          {displayDesc}
+                        </p>
 
-                    {/* ── Action row ── */}
-                    <div className="flex items-center justify-between pt-3 border-t border-[#6B3E1F]/40">
-                      <span className="font-condensed text-[9px] text-[#F8F1E5]/35 uppercase tracking-widest">
-                        {item.customizable ? t.menu.customizable : t.menu.fastDelivery}
-                      </span>
+                        {/* ── Action row ── */}
+                        <div className="flex items-center justify-between pt-3 border-t border-[#6B3E1F]/40">
+                          <span className="font-condensed text-[9px] text-[#F8F1E5]/35 uppercase tracking-widest">
+                            {item.customizable ? t.menu.customizable : t.menu.fastDelivery}
+                          </span>
 
-                      <button
-                        onClick={() => handleDirectAdd(item)}
-                        aria-label={t.menu.addLabel(displayName)}
-                        className="flex items-center gap-1.5 bg-[#E31B23] hover:bg-[#F9E014] hover:text-[#0A0A0A] text-[#F9E014] px-4 py-2 font-condensed text-xs uppercase tracking-wider transition-all duration-250 border border-[#F9E014] active:scale-95"
-                      >
-                        <Plus className="w-3.5 h-3.5" />
-                        {t.menu.add}
-                      </button>
-                    </div>
-                  </div>
+                          <button
+                            onClick={() => handleDirectAdd(item)}
+                            aria-label={t.menu.addLabel(displayName)}
+                            className="flex items-center gap-1.5 bg-[#E31B23] hover:bg-[#F9E014] hover:text-[#0A0A0A] text-[#F9E014] px-4 py-2 font-condensed text-xs uppercase tracking-wider transition-all duration-250 border border-[#F9E014] active:scale-95"
+                          >
+                            <Plus className="w-3.5 h-3.5" />
+                            {t.menu.add}
+                          </button>
+                        </div>
+                      </div>
 
-                  {/* Gold top accent line */}
-                  <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#F9E014]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </motion.article>
-              );
-            })}
-            </div>
+                      {/* Gold top accent line */}
+                      <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[#F9E014]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </motion.article>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* ── PREMIUM TEXT-ONLY LIST (FOR ITEMS WITHOUT IMAGES) ── */}
+            {currentCategoryData.items.filter(item => !item.image).length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                className="max-w-4xl mx-auto border-double border-4 border-[#6B3E1F]/60 bg-[#0d0c0c] p-6 sm:p-10 relative overflow-hidden"
+              >
+                {/* Decorative gold corners */}
+                <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#F9E014]/40" />
+                <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-[#F9E014]/40" />
+                <div className="absolute bottom-2 left-2 w-4 h-4 border-b border-l border-[#F9E014]/40" />
+                <div className="absolute bottom-2 right-2 w-4 h-4 border-b border-r border-[#F9E014]/40" />
+
+                {/* Section title inside frame */}
+                <div className="text-center mb-8">
+                  <h4 className="font-western text-[#F9E014] text-lg sm:text-xl uppercase tracking-widest">
+                    {lang === "es" ? "Lista de Especialidades" : "Menu Selection"}
+                  </h4>
+                  <p className="font-condensed text-xs text-[#E31B23] uppercase tracking-widest mt-1">
+                    {lang === "es" ? "Preparados al Instante con Tortillas Hechas a Mano" : "Freshly Prepared Daily with Handmade Tortillas"}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                  {currentCategoryData.items.filter(item => !item.image).map((item) => {
+                    const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
+                    const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
+
+                    return (
+                      <div key={item.id} className="group border-b border-[#6B3E1F]/30 pb-4 last:border-0 md:last:border-b">
+                        <div className="flex items-baseline justify-between gap-2">
+                          <h5 className="font-oswald text-[#F8F1E5] text-sm sm:text-base uppercase tracking-wide group-hover:text-[#F9E014] transition-colors">
+                            {displayName}
+                            {item.spicy && <span className="ml-1.5 text-xs">🌶️</span>}
+                            {item.popular && <span className="ml-1.5 text-xs">⭐</span>}
+                          </h5>
+                          <span className="flex-grow border-b border-dotted border-[#6B3E1F]/50 mx-2" />
+                          <div className="flex items-center gap-3">
+                            <span className="font-condensed text-[#F9E014] font-black text-sm">
+                              ${item.price.toFixed(2)}
+                            </span>
+                            <button
+                              onClick={() => handleDirectAdd(item)}
+                              aria-label={t.menu.addLabel(displayName)}
+                              className="bg-[#E31B23] hover:bg-[#F9E014] hover:text-[#0A0A0A] text-[#F9E014] w-6 h-6 flex items-center justify-center border border-[#F9E014] transition-all active:scale-90"
+                            >
+                              <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Bilingual subtext for tacos */}
+                        {selectedCategory === "tacos" && item.nameEn && item.nameEn !== item.name && (
+                          <p className="font-condensed text-[9px] text-[#F9E014]/40 uppercase tracking-widest mt-0.5">
+                            {lang === "es" ? item.nameEn : item.name}
+                          </p>
+                        )}
+
+                        <p className="text-[#F8F1E5]/50 text-xs font-light leading-relaxed mt-1">
+                          {displayDesc}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </motion.div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

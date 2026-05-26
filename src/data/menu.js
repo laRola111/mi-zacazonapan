@@ -119,8 +119,7 @@ export const MENU_DATA = {
           "Tocino ahumado crujiente revuelto con huevo esponjoso en tortilla de harina hecha a mano.",
         descriptionEn: "Smoky crispy bacon scrambled with fluffy eggs in a handmade flour tortilla.",
         price: 2.99,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         popular: true,
       },
       {
@@ -131,8 +130,7 @@ export const MENU_DATA = {
           "Papas doradas sazonadas revueltas con huevos de granja en tortilla casera.",
         descriptionEn: "Savory seasoned golden potatoes scrambled with farm eggs in a handmade tortilla.",
         price: 2.75,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t3",
@@ -142,8 +140,7 @@ export const MENU_DATA = {
           "Jamón ahumado clásico con huevo revuelto dentro de una tortilla gruesa y caliente.",
         descriptionEn: "Classic smoked ham paired with scrambled eggs inside a warm, thick tortilla.",
         price: 2.85,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t4",
@@ -154,8 +151,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Tender grilled cactus pads scrambled with fresh eggs. Nutritious and packed with heritage flavor.",
         price: 2.95,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t5",
@@ -166,8 +162,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Pan-fried Mexican sausage scrambled with fluffy eggs in a handmade tortilla.",
         price: 2.80,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t6",
@@ -178,8 +173,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Traditional crunchy corn tortilla strips scrambled with fresh eggs, onions, tomatoes, and melted cheese.",
         price: 2.99,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         popular: true,
       },
       {
@@ -191,8 +185,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Creamy pinto refried beans scrambled with soft eggs in a handmade tortilla.",
         price: 2.75,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t8",
@@ -203,8 +196,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Simple yet glorious. Creamy refried pinto beans with melted Monterey Jack and Cheddar cheese blend.",
         price: 2.50,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
       },
       {
         id: "t9",
@@ -215,8 +207,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Scrambled egg Mexican style with tomato, onion, serrano chile, and fresh cilantro.",
         price: 2.95,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         spicy: true,
       },
       {
@@ -228,8 +219,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Grilled marinated chicken fajita strips scrambled with egg in a handmade tortilla.",
         price: 3.25,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         popular: true,
       },
       {
@@ -241,8 +231,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Crispy pork rinds braised with eggs in green or red salsa. An irresistible classic.",
         price: 3.25,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         spicy: true,
         popular: true,
       },
@@ -255,8 +244,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Rich artisanal pork chorizo browned and scrambled with fresh eggs. Vibrant and delicious.",
         price: 2.99,
-        image:
-          "/images/breackfast-tacos.png",
+        image: null,
         popular: true,
       },
     ],
@@ -343,8 +331,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso cotija, onions, and crema.",
         price: 8.99,
-        image:
-          "/images/sopes (2).png",
+        image: null,
         spicy: true,
       },
       {
@@ -444,8 +431,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Steam-cooked beef head meat, ultra tender. Available Fridays and Saturdays. Served as taco or by the pound with cilantro and onion.",
         price: 14.99,
-        image:
-          "/images/barbacoa-de-res.png",
+        image: null,
       },
     ],
   },
@@ -464,8 +450,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Traditional milky rice water blended with cinnamon and vanilla. Sweet and refreshing.",
         price: 3.50,
-        image:
-          "https://images.unsplash.com/photo-1556881286-fc6915169721?q=80&w=600&auto=format&fit=crop",
+        image: null,
         popular: true,
       },
       {
@@ -477,8 +462,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Iced sweet hibiscus flower tea. Tart, crisp, and thirst-quenching.",
         price: 3.50,
-        image:
-          "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600&auto=format&fit=crop",
+        image: null,
       },
       {
         id: "d3",
@@ -490,7 +474,7 @@ export const MENU_DATA = {
           "Fragrant traditional Mexican coffee brewed with dark piloncillo and cinnamon stick.",
         price: 3.50,
         image:
-          "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop",
+          "/images/cafe-de-olla.png",
       },
       {
         id: "d4",
@@ -501,8 +485,7 @@ export const MENU_DATA = {
         descriptionEn:
           "Classic Mexican sodas in glass bottles. Choose Mandarin, Tamarind, Lime, or Pineapple.",
         price: 3.00,
-        image:
-          "https://images.unsplash.com/photo-1556881286-fc6915169721?q=80&w=600&auto=format&fit=crop",
+        image: null,
       },
       {
         id: "d5",
@@ -513,8 +496,7 @@ export const MENU_DATA = {
         descriptionEn:
           "The gold standard. Ice cold imported glass bottle sweetened with pure cane sugar.",
         price: 3.50,
-        image:
-          "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600&auto=format&fit=crop",
+        image: null,
         popular: true,
       },
     ],

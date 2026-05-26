@@ -107,7 +107,7 @@ export default function HandmadeTortillas() {
               {/* Appetizing Photo */}
               <div className="w-full h-80 sm:h-96 overflow-hidden border border-mexican-gold bg-mexican-black">
                 <img
-                  src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=800&auto=format&fit=crop"
+                  src="/images/mi-zacazonapan.png"
                   alt="Tortillas hechas a mano en comal — Mi Zacazonapan"
                   loading="lazy"
                   decoding="async"
