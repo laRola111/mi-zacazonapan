@@ -19,7 +19,7 @@ export const MENU_DATA = {
           "Two farm-fresh eggs on hot corn tortillas, smothered in ranchera sauce, queso fresco, cilantro, and refried beans.",
         price: 9.99,
         image:
-          "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop",
+          "/images/huevos-rancheros.png",
         spicy: true,
         popular: true,
       },
@@ -33,7 +33,7 @@ export const MENU_DATA = {
           "Three handmade flour tortilla tacos filled with scrambled eggs, your choice of meat, melted cheese, and fresh pico de gallo.",
         price: 8.50,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         customizable: true,
         popular: true,
       },
@@ -47,7 +47,7 @@ export const MENU_DATA = {
           "Giant handmade warm flour tortilla stuffed with scrambled eggs, crispy potatoes, refried beans, cheddar blend, and green salsa.",
         price: 10.99,
         image:
-          "https://images.unsplash.com/photo-1626700051175-6518c4793f06?q=80&w=600&auto=format&fit=crop",
+          "/images/burrito (3).png",
         popular: true,
         customizable: true,
       },
@@ -61,7 +61,7 @@ export const MENU_DATA = {
           "Authentic Mexican coffee brewed in a traditional clay pot with real piloncillo sugar, cinnamon sticks, and star anise.",
         price: 3.50,
         image:
-          "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop",
+          "/images/cafe-de-olla.png",
         popular: true,
       },
       {
@@ -74,7 +74,7 @@ export const MENU_DATA = {
           "Scrambled eggs cooked in a fire-roasted tomato and jalapeño salsa. Served with refried beans and handmade corn tortillas.",
         price: 9.25,
         image:
-          "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop",
+          "/images/huevito en salasa.png",
         spicy: true,
       },
       {
@@ -87,7 +87,7 @@ export const MENU_DATA = {
           "Farm eggs scrambled with sautéed baby nopales, sweet onions, juicy tomatoes, bell peppers, and fresh sliced avocado.",
         price: 9.50,
         image:
-          "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=600&auto=format&fit=crop",
+          "/images/vegetariano.png",
       },
       {
         id: "b7",
@@ -99,7 +99,7 @@ export const MENU_DATA = {
           "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso cotija, and fresh avocado.",
         price: 11.50,
         image:
-          "https://images.unsplash.com/photo-1626700051175-6518c4793f06?q=80&w=600&auto=format&fit=crop",
+          "/images/chilaquiles.png",
         spicy: true,
         popular: true,
       },
@@ -120,7 +120,7 @@ export const MENU_DATA = {
         descriptionEn: "Smoky crispy bacon scrambled with fluffy eggs in a handmade flour tortilla.",
         price: 2.99,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         popular: true,
       },
       {
@@ -132,7 +132,7 @@ export const MENU_DATA = {
         descriptionEn: "Savory seasoned golden potatoes scrambled with farm eggs in a handmade tortilla.",
         price: 2.75,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t3",
@@ -143,7 +143,7 @@ export const MENU_DATA = {
         descriptionEn: "Classic smoked ham paired with scrambled eggs inside a warm, thick tortilla.",
         price: 2.85,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t4",
@@ -155,7 +155,7 @@ export const MENU_DATA = {
           "Tender grilled cactus pads scrambled with fresh eggs. Nutritious and packed with heritage flavor.",
         price: 2.95,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t5",
@@ -167,7 +167,7 @@ export const MENU_DATA = {
           "Pan-fried Mexican sausage scrambled with fluffy eggs in a handmade tortilla.",
         price: 2.80,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t6",
@@ -179,7 +179,7 @@ export const MENU_DATA = {
           "Traditional crunchy corn tortilla strips scrambled with fresh eggs, onions, tomatoes, and melted cheese.",
         price: 2.99,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         popular: true,
       },
       {
@@ -192,7 +192,7 @@ export const MENU_DATA = {
           "Creamy pinto refried beans scrambled with soft eggs in a handmade tortilla.",
         price: 2.75,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t8",
@@ -204,7 +204,7 @@ export const MENU_DATA = {
           "Simple yet glorious. Creamy refried pinto beans with melted Monterey Jack and Cheddar cheese blend.",
         price: 2.50,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
       },
       {
         id: "t9",
@@ -216,7 +216,7 @@ export const MENU_DATA = {
           "Scrambled egg Mexican style with tomato, onion, serrano chile, and fresh cilantro.",
         price: 2.95,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         spicy: true,
       },
       {
@@ -229,7 +229,7 @@ export const MENU_DATA = {
           "Grilled marinated chicken fajita strips scrambled with egg in a handmade tortilla.",
         price: 3.25,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         popular: true,
       },
       {
@@ -242,7 +242,7 @@ export const MENU_DATA = {
           "Crispy pork rinds braised with eggs in green or red salsa. An irresistible classic.",
         price: 3.25,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         spicy: true,
         popular: true,
       },
@@ -256,7 +256,7 @@ export const MENU_DATA = {
           "Rich artisanal pork chorizo browned and scrambled with fresh eggs. Vibrant and delicious.",
         price: 2.99,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/breackfast-tacos.png",
         popular: true,
       },
     ],
@@ -277,7 +277,7 @@ export const MENU_DATA = {
           "Three authentic tacos on handmade corn tortillas with your choice of meat, cilantro, onion, and house salsa.",
         price: 9.99,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/tacos (2).png",
         customizable: true,
         popular: true,
       },
@@ -291,7 +291,7 @@ export const MENU_DATA = {
           "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa.",
         price: 10.50,
         image:
-          "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=600&auto=format&fit=crop",
+          "/images/sopes (2).png",
         customizable: true,
       },
       {
@@ -304,7 +304,7 @@ export const MENU_DATA = {
           "Three crispy cheese-stuffed corn tortillas filled with slow-cooked shredded beef birria. Served with hot consommé broth for dipping.",
         price: 14.50,
         image:
-          "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop",
+          "/images/quesabirria.png",
         popular: true,
       },
       {
@@ -317,7 +317,7 @@ export const MENU_DATA = {
           "The ultimate Mexican sandwich: toasted bolillo with milanesa, ham, chorizo, scrambled eggs, hot dog, cheese, avocado, and pickled jalapeños.",
         price: 13.99,
         image:
-          "https://images.unsplash.com/photo-1539252554453-80ab65ce3586?q=80&w=600&auto=format&fit=crop",
+          "/images/torta-cubana.png",
         popular: true,
       },
       {
@@ -330,7 +330,7 @@ export const MENU_DATA = {
           "Giant grilled flour tortilla with melted Oaxaca cheese and your choice of sizzling grilled meat. Served with crema and guacamole.",
         price: 11.99,
         image:
-          "https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?q=80&w=600&auto=format&fit=crop",
+          "/images/quesadilla (2).png",
         customizable: true,
         popular: true,
       },
@@ -344,7 +344,7 @@ export const MENU_DATA = {
           "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso cotija, onions, and crema.",
         price: 8.99,
         image:
-          "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop",
+          "/images/sopes (2).png",
         spicy: true,
       },
       {
@@ -357,7 +357,7 @@ export const MENU_DATA = {
           "Customize your dream burrito: choose your meat, beans, rice, melted cheeses, fresh veggies, and house salsas.",
         price: 12.50,
         image:
-          "https://images.unsplash.com/photo-1626700051175-6518c4793f06?q=80&w=600&auto=format&fit=crop",
+          "/images/burrito (2).png",
         customizable: true,
       },
       {
@@ -370,7 +370,7 @@ export const MENU_DATA = {
           "The house star dish: grilled meat accompanied by nopales, pot-cooked beans, rice, handmade tortillas, and all the salsa.",
         price: 15.99,
         image:
-          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop",
+          "/images/mi-zacazonapan.png",
         popular: true,
       },
     ],
@@ -393,7 +393,7 @@ export const MENU_DATA = {
           "Slow steam-cooked shredded beef barbacoa, seasoned with avocado leaves and chiles. Melt-in-your-mouth tender. By the pound or by taco.",
         price: 16.99,
         image:
-          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop",
+          "/images/barbacoa-de-res.png",
         popular: true,
       },
       {
@@ -403,10 +403,10 @@ export const MENU_DATA = {
         description:
           "Rica barbacoa de chivo los sábados. Carne de chivo cocida a baja temperatura con especias tradicionales. Servida con consomé caliente.",
         descriptionEn:
-          "Rich goat barbacoa available Saturdays only. Slow-cooked with traditional spices and served with hot consommé broth.",
+          "Goat barbacoa available Saturdays only. Slow-cooked with traditional spices and served with hot consommé broth.",
         price: 18.50,
         image:
-          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop",
+          "/images/BerbacoaDeChivo.png",
         popular: true,
       },
       {
@@ -419,7 +419,7 @@ export const MENU_DATA = {
           "Full platter with tender goat barbacoa, chickpea consommé broth, cebollitas, cilantro, lime, and red salsa. Saturdays only.",
         price: 21.00,
         image:
-          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop",
+          "/images/servido-de-chivo.png",
       },
       {
         id: "ba4",
@@ -431,7 +431,7 @@ export const MENU_DATA = {
           "Authentic Mexican tripe soup simmered in red chile broth with lime, onion, oregano, and crushed chiles. Served with hot handmade tortillas.",
         price: 12.99,
         image:
-          "https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=600&auto=format&fit=crop",
+          "/images/menudo.png",
         spicy: true,
         popular: true,
       },
@@ -445,7 +445,7 @@ export const MENU_DATA = {
           "Steam-cooked beef head meat, ultra tender. Available Fridays and Saturdays. Served as taco or by the pound with cilantro and onion.",
         price: 14.99,
         image:
-          "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop",
+          "/images/barbacoa-de-res.png",
       },
     ],
   },

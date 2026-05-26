@@ -10,12 +10,28 @@ import CartDrawer from "../components/CartDrawer";
 import ExtrasBadge from "../components/ExtrasBadge";
 import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const { t } = useLanguage();
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Lock scroll during loading screen and handle duration
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.overflow = "";
+      }, 2500);
+      return () => clearTimeout(timer);
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isLoading]);
 
   // Track active section for scrollspy Navbar indicator
   useEffect(() => {
@@ -89,6 +105,57 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-mexican-black flex flex-col font-sans select-none selection:bg-mexican-gold selection:text-mexican-black">
+      {/* Premium Loader/Intro Animation */}
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <motion.div
+            key="loader"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            className="fixed inset-0 z-[999] bg-[#050403] flex flex-col items-center justify-center select-none pointer-events-auto"
+          >
+            {/* Saturated Warm Radial Glow */}
+            <div className="absolute inset-0 opacity-80 z-0" style={{ background: "radial-gradient(circle at center, rgba(197,30,30,0.15) 0%, transparent 60%)" }} />
+            <div className="absolute w-[400px] h-[400px] bg-mexican-gold/10 rounded-full blur-[100px] pointer-events-none z-0" />
+            
+            <motion.div
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ 
+                scale: 1,
+                opacity: 1,
+              }}
+              transition={{ 
+                duration: 0.8, 
+                ease: "easeOut"
+              }}
+              className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-mexican-gold bg-[#120e0b] z-10 flex items-center justify-center shadow-[0_0_40px_rgba(244,196,48,0.3)] animate-pulse"
+            >
+              <img
+                src="/images/logo.png"
+                alt="Mi Zacazonapan Logo"
+                className="w-[85%] h-[85%] object-contain filter drop-shadow-[0_0_8px_rgba(244,196,48,0.6)]"
+              />
+            </motion.div>
+
+            {/* Elegant Subtitle */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 0.9, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="mt-8 text-center z-10"
+            >
+              <h2 className="font-western text-2xl tracking-widest text-mexican-gold uppercase">
+                Mi Zacazonapan
+              </h2>
+              <p className="text-[10px] tracking-[0.3em] text-mexican-cream/80 uppercase font-sans font-bold mt-1 animate-pulse">
+                Taquería Premium · Austin, TX
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Sticky Header Navbar */}
       <Navbar
         cartCount={totalCartCount}
