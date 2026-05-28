@@ -1,10 +1,11 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // MI ZACAZONAPAN — Menu Data (extracted from physical printed menu)
 // Bilingual: ES / EN names and descriptions
+// Orden: Breakfast → Lonches/Tortas → Tacos → Quesadillas → Burritos → Sopes/Picaditas → Tipos de Carne → Barbacoa → Menudo → Extras
 // ─────────────────────────────────────────────────────────────────────────────
 
 export const MENU_DATA = {
-  // ── DESAYUNOS / BREAKFAST ────────────────────────────────────────────────
+  // ── 1. DESAYUNOS / BREAKFAST ──────────────────────────────────────────────
   breakfast: {
     title: "Breakfast / Desayunos",
     subtitle: "Iniciando el día con el sazón de casa",
@@ -17,9 +18,7 @@ export const MENU_DATA = {
           "Dos huevos frescos sobre tortillas de maíz calientes, bañados en salsa ranchera, queso fresco, cilantro y frijoles negros refritos.",
         descriptionEn:
           "Two farm-fresh eggs on hot corn tortillas, smothered in ranchera sauce, queso fresco, cilantro, and refried beans.",
-        price: 9.99,
-        image:
-          "/images/huevos-rancheros.png",
+        image: "/images/huevos-rancheros.png",
         spicy: true,
         popular: true,
       },
@@ -31,9 +30,7 @@ export const MENU_DATA = {
           "Tres tacos en tortilla de harina hecha a mano, rellenos de huevo revuelto, tu elección de carne, queso y pico de gallo fresco.",
         descriptionEn:
           "Three handmade flour tortilla tacos filled with scrambled eggs, your choice of meat, melted cheese, and fresh pico de gallo.",
-        price: 8.50,
-        image:
-          "/images/breackfast-tacos.png",
+        image: "/images/breackfast-tacos.png",
         customizable: true,
         popular: true,
       },
@@ -45,9 +42,7 @@ export const MENU_DATA = {
           "Tortilla de harina gigante hecha a mano, rellena de huevo revuelto, papas crujientes, frijoles refritos, queso cheddar y salsa verde.",
         descriptionEn:
           "Giant handmade warm flour tortilla stuffed with scrambled eggs, crispy potatoes, refried beans, cheddar blend, and green salsa.",
-        price: 10.99,
-        image:
-          "/images/burrito (3).png",
+        image: "/images/burrito (3).png",
         popular: true,
         customizable: true,
       },
@@ -59,9 +54,7 @@ export const MENU_DATA = {
           "Café auténtico mexicano preparado en olla de barro con piloncillo real, rajas de canela y anís estrella. Caliente y aromático.",
         descriptionEn:
           "Authentic Mexican coffee brewed in a traditional clay pot with real piloncillo sugar, cinnamon sticks, and star anise.",
-        price: 3.50,
-        image:
-          "/images/cafe-de-olla.png",
+        image: "/images/cafe-de-olla.png",
         popular: true,
       },
       {
@@ -72,9 +65,7 @@ export const MENU_DATA = {
           "Huevos revueltos cocinados en salsa de jitomate tatemado con jalapeño. Se sirven con frijoles refritos y tortillas de maíz hechas a mano.",
         descriptionEn:
           "Scrambled eggs cooked in a fire-roasted tomato and jalapeño salsa. Served with refried beans and handmade corn tortillas.",
-        price: 9.25,
-        image:
-          "/images/huevito en salasa.png",
+        image: "/images/huevito en salasa.png",
         spicy: true,
       },
       {
@@ -85,9 +76,7 @@ export const MENU_DATA = {
           "Huevos de granja revueltos con nopales tiernos salteados, cebolla, jitomate, pimiento morrón y rebanadas de aguacate fresco.",
         descriptionEn:
           "Farm eggs scrambled with sautéed baby nopales, sweet onions, juicy tomatoes, bell peppers, and fresh sliced avocado.",
-        price: 9.50,
-        image:
-          "/images/vegetariano.png",
+        image: "/images/vegetariano.png",
       },
       {
         id: "b7",
@@ -97,278 +86,273 @@ export const MENU_DATA = {
           "Totopos caseros en salsa roja o verde, cubiertos con dos huevos fritos, crema mexicana, queso cotija y aguacate fresco.",
         descriptionEn:
           "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso cotija, and fresh avocado.",
-        price: 11.50,
-        image:
-          "/images/chilaquiles.png",
+        image: "/images/chilaquiles.png",
         spicy: true,
         popular: true,
       },
     ],
   },
 
-  // ── TACOS Y PLATILLOS (Bilingüe — del menú impreso) ──────────────────────
-  tacos: {
-    title: "Tacos y Platillos",
-    subtitle: "En tortilla hecha a mano al momento",
+  // ── 2. LONCHES / TORTAS ──────────────────────────────────────────────────
+  lonches: {
+    title: "Lonches / Tortas",
+    subtitle: "El sándwich mexicano de la casa",
     items: [
       {
-        id: "t1",
-        name: "Tocino y Huevo",
-        nameEn: "Bacon and Egg",
-        description:
-          "Tocino ahumado crujiente revuelto con huevo esponjoso en tortilla de harina hecha a mano.",
-        descriptionEn: "Smoky crispy bacon scrambled with fluffy eggs in a handmade flour tortilla.",
-        price: 2.99,
-        image: null,
-        popular: true,
-      },
-      {
-        id: "t2",
-        name: "Papas y Huevo",
-        nameEn: "Potato and Egg",
-        description:
-          "Papas doradas sazonadas revueltas con huevos de granja en tortilla casera.",
-        descriptionEn: "Savory seasoned golden potatoes scrambled with farm eggs in a handmade tortilla.",
-        price: 2.75,
-        image: null,
-      },
-      {
-        id: "t3",
-        name: "Jamón y Huevo",
-        nameEn: "Ham and Egg",
-        description:
-          "Jamón ahumado clásico con huevo revuelto dentro de una tortilla gruesa y caliente.",
-        descriptionEn: "Classic smoked ham paired with scrambled eggs inside a warm, thick tortilla.",
-        price: 2.85,
-        image: null,
-      },
-      {
-        id: "t4",
-        name: "Nopal y Huevo",
-        nameEn: "Cactus and Egg",
-        description:
-          "Nopales tiernos a la plancha revueltos con huevos frescos. Nutritivo y lleno de sabor.",
-        descriptionEn:
-          "Tender grilled cactus pads scrambled with fresh eggs. Nutritious and packed with heritage flavor.",
-        price: 2.95,
-        image: null,
-      },
-      {
-        id: "t5",
-        name: "Salchicha y Huevo",
-        nameEn: "Sausage and Egg",
-        description:
-          "Salchicha mexicana a la sartén revuelta con huevos esponjosos en tortilla hecha a mano.",
-        descriptionEn:
-          "Pan-fried Mexican sausage scrambled with fluffy eggs in a handmade tortilla.",
-        price: 2.80,
-        image: null,
-      },
-      {
-        id: "t6",
-        name: "Migas",
-        nameEn: "Migas",
-        description:
-          "Tiras crujientes de tortilla de maíz revueltas con huevos frescos, cebolla, jitomate y queso derretido.",
-        descriptionEn:
-          "Traditional crunchy corn tortilla strips scrambled with fresh eggs, onions, tomatoes, and melted cheese.",
-        price: 2.99,
-        image: null,
-        popular: true,
-      },
-      {
-        id: "t7",
-        name: "Frijol y Huevo",
-        nameEn: "Bean and Egg",
-        description:
-          "Frijoles pintos refritos cremosos con huevo revuelto suave en tortilla hecha a mano.",
-        descriptionEn:
-          "Creamy pinto refried beans scrambled with soft eggs in a handmade tortilla.",
-        price: 2.75,
-        image: null,
-      },
-      {
-        id: "t8",
-        name: "Frijoles y Queso",
-        nameEn: "Beans and Cheese",
-        description:
-          "Frijoles refritos con mezcla de queso Monterey Jack y Cheddar derretido. Sencillo y glorioso.",
-        descriptionEn:
-          "Simple yet glorious. Creamy refried pinto beans with melted Monterey Jack and Cheddar cheese blend.",
-        price: 2.50,
-        image: null,
-      },
-      {
-        id: "t9",
-        name: "Mexicano y Huevo",
-        nameEn: "Mexican Style and Egg",
-        description:
-          "Huevo revuelto estilo mexicano con jitomate, cebolla, chile serrano y cilantro fresco.",
-        descriptionEn:
-          "Scrambled egg Mexican style with tomato, onion, serrano chile, and fresh cilantro.",
-        price: 2.95,
-        image: null,
-        spicy: true,
-      },
-      {
-        id: "t10",
-        name: "Fajita y Huevo",
-        nameEn: "Fajita and Egg",
-        description:
-          "Tiras de fajita de pollo marinadas a la parrilla revueltas con huevo en tortilla hecha a mano.",
-        descriptionEn:
-          "Grilled marinated chicken fajita strips scrambled with egg in a handmade tortilla.",
-        price: 3.25,
-        image: null,
-        popular: true,
-      },
-      {
-        id: "t11",
-        name: "Chicharrón y Huevos",
-        nameEn: "Pork Rind and Eggs",
-        description:
-          "Chicharrón de cerdo crujiente guisado con huevos en salsa verde o roja. Un clásico irresistible.",
-        descriptionEn:
-          "Crispy pork rinds braised with eggs in green or red salsa. An irresistible classic.",
-        price: 3.25,
-        image: null,
-        spicy: true,
-        popular: true,
-      },
-      {
-        id: "t12",
-        name: "Chorizo y Huevo",
-        nameEn: "Chorizo and Egg",
-        description:
-          "Chorizo artesanal de cerdo bien dorado y revuelto con huevos frescos. Vibrante y delicioso.",
-        descriptionEn:
-          "Rich artisanal pork chorizo browned and scrambled with fresh eggs. Vibrant and delicious.",
-        price: 2.99,
-        image: null,
-        popular: true,
-      },
-    ],
-  },
-
-  // ── ESPECIALIDADES ───────────────────────────────────────────────────────
-  specialties: {
-    title: "Especialidades de la Casa",
-    subtitle: "Los favoritos y gigantes del Zacazonapan",
-    items: [
-      {
-        id: "s1",
-        name: "Tacos de Carne",
-        nameEn: "Street Tacos",
-        description:
-          "Tres tacos auténticos en tortilla de maíz hecha a mano con tu elección de carne, cilantro, cebolla y salsa de la casa.",
-        descriptionEn:
-          "Three authentic tacos on handmade corn tortillas with your choice of meat, cilantro, onion, and house salsa.",
-        price: 9.99,
-        image:
-          "/images/tacos (2).png",
-        customizable: true,
-        popular: true,
-      },
-      {
-        id: "s2",
-        name: "Sopes Surtidos",
-        nameEn: "Sopes Trio",
-        description:
-          "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa.",
-        descriptionEn:
-          "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa.",
-        price: 10.50,
-        image:
-          "/images/sopes (2).png",
-        customizable: true,
-      },
-      {
-        id: "s3",
-        name: "Quesabirria con Consomé",
-        nameEn: "Quesabirria with Consommé",
-        description:
-          "Tres tortillas de maíz fritas rellenas de queso fundido y birria de res deshebrada, servidas con taza de consomé caliente para sumergir.",
-        descriptionEn:
-          "Three crispy cheese-stuffed corn tortillas filled with slow-cooked shredded beef birria. Served with hot consommé broth for dipping.",
-        price: 14.50,
-        image:
-          "/images/quesabirria.png",
-        popular: true,
-      },
-      {
-        id: "s4",
+        id: "l1",
         name: "Torta Cubana",
         nameEn: "Cuban Torta",
         description:
           "El sándwich definitivo: bolillo tostado con milanesa, jamón, chorizo, huevo, hot dog, queso, aguacate y jalapeños encurtidos.",
         descriptionEn:
           "The ultimate Mexican sandwich: toasted bolillo with milanesa, ham, chorizo, scrambled eggs, hot dog, cheese, avocado, and pickled jalapeños.",
-        price: 13.99,
-        image:
-          "/images/torta-cubana.png",
+        image: "/images/torta-cubana.png",
+        popular: true,
+      },
+    ],
+  },
+
+  // ── 3. TACOS ────────────────────────────────────────────────────────────
+  tacos: {
+    title: "Tacos",
+    subtitle: "En tortilla hecha a mano al momento",
+    items: [
+      {
+        id: "tc1",
+        name: "Tacos de Carne",
+        nameEn: "Street Tacos",
+        description:
+          "Tres tacos auténticos en tortilla de maíz hecha a mano con tu elección de carne, cilantro, cebolla y salsa de la casa.",
+        descriptionEn:
+          "Three authentic tacos on handmade corn tortillas with your choice of meat, cilantro, onion, and house salsa.",
+        image: "/images/tacos (2).png",
+        customizable: true,
         popular: true,
       },
       {
-        id: "s5",
+        id: "tc2",
+        name: "Tocino y Huevo",
+        nameEn: "Bacon and Egg",
+        description:
+          "Tocino ahumado crujiente revuelto con huevo esponjoso en tortilla de harina hecha a mano.",
+        descriptionEn: "Smoky crispy bacon scrambled with fluffy eggs in a handmade flour tortilla.",
+        image: null,
+        popular: true,
+      },
+      {
+        id: "tc3",
+        name: "Papas y Huevo",
+        nameEn: "Potato and Egg",
+        description:
+          "Papas doradas sazonadas revueltas con huevos de granja en tortilla casera.",
+        descriptionEn: "Savory seasoned golden potatoes scrambled with farm eggs in a handmade tortilla.",
+        image: null,
+      },
+      {
+        id: "tc4",
+        name: "Jamón y Huevo",
+        nameEn: "Ham and Egg",
+        description:
+          "Jamón ahumado clásico con huevo revuelto dentro de una tortilla gruesa y caliente.",
+        descriptionEn: "Classic smoked ham paired with scrambled eggs inside a warm, thick tortilla.",
+        image: null,
+      },
+      {
+        id: "tc5",
+        name: "Nopal y Huevo",
+        nameEn: "Cactus and Egg",
+        description:
+          "Nopales tiernos a la plancha revueltos con huevos frescos. Nutritivo y lleno de sabor.",
+        descriptionEn:
+          "Tender grilled cactus pads scrambled with fresh eggs. Nutritious and packed with heritage flavor.",
+        image: null,
+      },
+      {
+        id: "tc6",
+        name: "Salchicha y Huevo",
+        nameEn: "Sausage and Egg",
+        description:
+          "Salchicha mexicana a la sartén revuelta con huevos esponjosos en tortilla hecha a mano.",
+        descriptionEn:
+          "Pan-fried Mexican sausage scrambled with fluffy eggs in a handmade tortilla.",
+        image: null,
+      },
+      {
+        id: "tc7",
+        name: "Migas",
+        nameEn: "Migas",
+        description:
+          "Tiras crujientes de tortilla de maíz revueltas con huevos frescos, cebolla, jitomate y queso derretido.",
+        descriptionEn:
+          "Traditional crunchy corn tortilla strips scrambled with fresh eggs, onions, tomatoes, and melted cheese.",
+        image: null,
+        popular: true,
+      },
+      {
+        id: "tc8",
+        name: "Frijol y Huevo",
+        nameEn: "Bean and Egg",
+        description:
+          "Frijoles pintos refritos cremosos con huevo revuelto suave en tortilla hecha a mano.",
+        descriptionEn:
+          "Creamy pinto refried beans scrambled with soft eggs in a handmade tortilla.",
+        image: null,
+      },
+      {
+        id: "tc9",
+        name: "Frijoles y Queso",
+        nameEn: "Beans and Cheese",
+        description:
+          "Frijoles refritos con mezcla de queso Monterey Jack y Cheddar derretido. Sencillo y glorioso.",
+        descriptionEn:
+          "Simple yet glorious. Creamy refried pinto beans with melted Monterey Jack and Cheddar cheese blend.",
+        image: null,
+      },
+      {
+        id: "tc10",
+        name: "Mexicano y Huevo",
+        nameEn: "Mexican Style and Egg",
+        description:
+          "Huevo revuelto estilo mexicano con jitomate, cebolla, chile serrano y cilantro fresco.",
+        descriptionEn:
+          "Scrambled egg Mexican style with tomato, onion, serrano chile, and fresh cilantro.",
+        image: null,
+        spicy: true,
+      },
+      {
+        id: "tc11",
+        name: "Fajita y Huevo",
+        nameEn: "Fajita and Egg",
+        description:
+          "Tiras de fajita de pollo marinadas a la parrilla revueltas con huevo en tortilla hecha a mano.",
+        descriptionEn:
+          "Grilled marinated chicken fajita strips scrambled with egg in a handmade tortilla.",
+        image: null,
+        popular: true,
+      },
+      {
+        id: "tc12",
+        name: "Chicharrón y Huevos",
+        nameEn: "Pork Rind and Eggs",
+        description:
+          "Chicharrón de cerdo crujiente guisado con huevos en salsa verde o roja. Un clásico irresistible.",
+        descriptionEn:
+          "Crispy pork rinds braised with eggs in green or red salsa. An irresistible classic.",
+        image: null,
+        spicy: true,
+        popular: true,
+      },
+      {
+        id: "tc13",
+        name: "Chorizo y Huevo",
+        nameEn: "Chorizo and Egg",
+        description:
+          "Chorizo artesanal de cerdo bien dorado y revuelto con huevos frescos. Vibrante y delicioso.",
+        descriptionEn:
+          "Rich artisanal pork chorizo browned and scrambled with fresh eggs. Vibrant and delicious.",
+        image: null,
+        popular: true,
+      },
+    ],
+  },
+
+  // ── 4. QUESADILLAS ───────────────────────────────────────────────────────
+  quesadillas: {
+    title: "Quesadillas",
+    subtitle: "Queso Oaxaca fundido en tortilla artesanal",
+    items: [
+      {
+        id: "q1",
         name: "Quesadilla Gigante",
         nameEn: "Giant Quesadilla",
         description:
           "Tortilla de harina gigante asada a la plancha con queso Oaxaca derretido y tu elección de carne. Servida con crema y guacamole.",
         descriptionEn:
           "Giant grilled flour tortilla with melted Oaxaca cheese and your choice of sizzling grilled meat. Served with crema and guacamole.",
-        price: 11.99,
-        image:
-          "/images/quesadilla (2).png",
+        image: "/images/quesadilla (2).png",
         customizable: true,
         popular: true,
       },
       {
-        id: "s6",
-        name: "Picaditas",
-        nameEn: "Picaditas",
+        id: "q2",
+        name: "Quesabirria con Consomé",
+        nameEn: "Quesabirria with Consommé",
         description:
-          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, salsa verde o roja, queso cotija, cebolla y crema.",
+          "Tres tortillas de maíz fritas rellenas de queso fundido y birria de res deshebrada, servidas con taza de consomé caliente para sumergir.",
         descriptionEn:
-          "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso cotija, onions, and crema.",
-        price: 8.99,
-        image: null,
-        spicy: true,
+          "Three crispy cheese-stuffed corn tortillas filled with slow-cooked shredded beef birria. Served with hot consommé broth for dipping.",
+        image: "/images/quesabirria.png",
+        popular: true,
       },
+    ],
+  },
+
+  // ── 5. BURRITOS ──────────────────────────────────────────────────────────
+  burritos: {
+    title: "Burritos",
+    subtitle: "Gigantes, enrollados y llenos de sabor",
+    items: [
       {
-        id: "s7",
+        id: "bu1",
         name: "Burrito Personalizado",
         nameEn: "Build Your Own Burrito",
         description:
           "Crea tu burrito ideal: elige tu carne, frijoles, arroz, quesos derretidos, verduras frescas y salsas de la casa.",
         descriptionEn:
           "Customize your dream burrito: choose your meat, beans, rice, melted cheeses, fresh veggies, and house salsas.",
-        price: 12.50,
-        image:
-          "/images/burrito (2).png",
+        image: "/images/burrito (2).png",
         customizable: true,
+        popular: true,
+      },
+    ],
+  },
+
+  // ── 6. SOPES / PICADITAS ─────────────────────────────────────────────────
+  sopes: {
+    title: "Sopes / Picaditas",
+    subtitle: "Masa artesanal con todos los toppings",
+    items: [
+      {
+        id: "sp1",
+        name: "Sopes Surtidos",
+        nameEn: "Sopes Trio",
+        description:
+          "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa.",
+        descriptionEn:
+          "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa.",
+        image: "/images/sopes (2).png",
+        customizable: true,
+        popular: true,
       },
       {
-        id: "s8",
+        id: "sp2",
+        name: "Picaditas",
+        nameEn: "Picaditas",
+        description:
+          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, salsa verde o roja, queso cotija, cebolla y crema.",
+        descriptionEn:
+          "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso cotija, onions, and crema.",
+        image: null,
+        spicy: true,
+      },
+      {
+        id: "sp3",
         name: "Platillo Mi Zacazonapan",
         nameEn: "Mi Zacazonapan Special",
         description:
           "El platillo estrella de la casa: carne a la plancha acompañada de nopales, frijoles de olla, arroz, tortillas hechas a mano y toda la salsa.",
         descriptionEn:
           "The house star dish: grilled meat accompanied by nopales, pot-cooked beans, rice, handmade tortillas, and all the salsa.",
-        price: 15.99,
-        image:
-          "/images/mi-zacazonapan.png",
+        image: "/images/mi-zacazonapan.png",
         popular: true,
       },
     ],
   },
 
-  // ── BARBACOA Y CALDOS ────────────────────────────────────────────────────
-  // Viernes y Sábado: Menudo, Barbacoa, Cabeza de Res
-  // Sábados: Rica Barbacoa de Chivo y Res
+  // ── 7. BARBACOA ──────────────────────────────────────────────────────────
   barbacoa: {
-    title: "Ricas Barbacoas de Res y de Chivo",
-    subtitle: "Viernes y Sábado · Por libra o por taco con su rico consomé",
+    title: "Ricas Barbacoas",
+    subtitle: "Viernes y Sábado · Barbacoa de Res y de Chivo",
     items: [
       {
         id: "ba1",
@@ -378,9 +362,7 @@ export const MENU_DATA = {
           "Barbacoa de res cocida a vapor lentamente, profundamente sazonada con hojas de aguacate y chiles. Se deshace en la boca. Por libra o por taco.",
         descriptionEn:
           "Slow steam-cooked shredded beef barbacoa, seasoned with avocado leaves and chiles. Melt-in-your-mouth tender. By the pound or by taco.",
-        price: 16.99,
-        image:
-          "/images/barbacoa-de-res.png",
+        image: "/images/barbacoa-de-res.png",
         popular: true,
       },
       {
@@ -391,9 +373,7 @@ export const MENU_DATA = {
           "Rica barbacoa de chivo los sábados. Carne de chivo cocida a baja temperatura con especias tradicionales. Servida con consomé caliente.",
         descriptionEn:
           "Goat barbacoa available Saturdays only. Slow-cooked with traditional spices and served with hot consommé broth.",
-        price: 18.50,
-        image:
-          "/images/BerbacoaDeChivo.png",
+        image: "/images/BerbacoaDeChivo.png",
         popular: true,
       },
       {
@@ -404,120 +384,115 @@ export const MENU_DATA = {
           "Plato completo con barbacoa de chivo tierna, consomé de garbanzo, cebollitas, cilantro, limón y salsa roja. Sábados únicamente.",
         descriptionEn:
           "Full platter with tender goat barbacoa, chickpea consommé broth, cebollitas, cilantro, lime, and red salsa. Saturdays only.",
-        price: 21.00,
-        image:
-          "/images/servido-de-chivo.png",
+        image: "/images/servido-de-chivo.png",
       },
       {
         id: "ba4",
-        name: "Menudo Tradicional",
-        nameEn: "Traditional Menudo",
-        description:
-          "Caldo de panza de res auténtico simmered en caldo de chile rojo con limón, cebolla, orégano y chiles quebrados. Con tortillas calientes.",
-        descriptionEn:
-          "Authentic Mexican tripe soup simmered in red chile broth with lime, onion, oregano, and crushed chiles. Served with hot handmade tortillas.",
-        price: 12.99,
-        image:
-          "/images/menudo.png",
-        spicy: true,
-        popular: true,
-      },
-      {
-        id: "ba5",
         name: "Cabeza de Res",
         nameEn: "Beef Head Meat",
         description:
           "Carne de cabeza de res cocida a vapor, ultra tierna. Disponible viernes y sábados. Servida en taco o por libra con cilantro y cebolla.",
         descriptionEn:
           "Steam-cooked beef head meat, ultra tender. Available Fridays and Saturdays. Served as taco or by the pound with cilantro and onion.",
-        price: 14.99,
         image: null,
       },
     ],
   },
 
-  // ── BEBIDAS ──────────────────────────────────────────────────────────────
-  drinks: {
-    title: "Bebidas",
-    subtitle: "Para calmar la sed con sabor mexicano",
+  // ── 8. MENUDO ────────────────────────────────────────────────────────────
+  menudo: {
+    title: "Menudo",
+    subtitle: "Viernes y Sábado · El remedio de la casa",
     items: [
       {
-        id: "d1",
+        id: "m1",
+        name: "Menudo Tradicional",
+        nameEn: "Traditional Menudo",
+        description:
+          "Caldo de panza de res auténtico simmered en caldo de chile rojo con limón, cebolla, orégano y chiles quebrados. Con tortillas calientes.",
+        descriptionEn:
+          "Authentic Mexican tripe soup simmered in red chile broth with lime, onion, oregano, and crushed chiles. Served with hot handmade tortillas.",
+        image: "/images/menudo.png",
+        spicy: true,
+        popular: true,
+      },
+    ],
+  },
+
+  // ── 9. EXTRAS / BEBIDAS ──────────────────────────────────────────────────
+  extras: {
+    title: "Extras / Bebidas",
+    subtitle: "Para complementar tu orden",
+    items: [
+      {
+        id: "ex1",
         name: "Agua de Horchata Tradicional",
         nameEn: "Traditional Horchata",
         description:
-          "Nuestra receta de la casa. Bebida cremosa de arroz, leche y un toque de canela premium. Servida bien fría, es la compañera obligatoria para tus tacos.",
+          "Nuestra receta de la casa. Bebida cremosa de arroz, leche y un toque de canela premium. Servida bien fría.",
         descriptionEn:
-          "Traditional sweet and creamy rice water with a hint of premium cinnamon. The absolute best pairing for your tacos.",
-        price: 3.50,
+          "Our house recipe. Creamy rice drink with a hint of premium cinnamon. Served ice cold.",
         image: null,
         popular: true,
       },
       {
-        id: "d2",
+        id: "ex2",
         name: "Agua de Jamaica",
         nameEn: "Hibiscus Flower Tea",
         description:
-          "El clásico sabor de México. Infusión natural de flores de jamaica seleccionadas, que ofrece un balance perfecto entre un toque acidito y un dulzor refrescante.",
+          "El clásico sabor de México. Infusión natural de flores de jamaica, perfecta entre ácido y dulce.",
         descriptionEn:
-          "The classic taste of Mexico. Natural infusion of selected hibiscus flowers, offering a perfect balance between tart and sweet.",
-        price: 3.50,
+          "The classic taste of Mexico. Natural hibiscus flower infusion, perfect balance between tart and sweet.",
         image: null,
       },
       {
-        id: "d6",
+        id: "ex3",
         name: "Agua de Naranja",
         nameEn: "Fresh Orange Water",
         description:
-          "Pura energía cítrica en tu vaso. Preparada con jugo de naranjas frescas exprimidas, es una opción ligera, dulce y con el punto exacto de acidez natural.",
+          "Preparada con jugo de naranjas frescas exprimidas. Ligera, dulce y con el punto exacto de acidez natural.",
         descriptionEn:
-          "Pure citrus energy in your glass. Prepared with freshly squeezed orange juice, light, sweet, and perfectly refreshing.",
-        price: 3.50,
+          "Prepared with freshly squeezed orange juice. Light, sweet, and perfectly refreshing.",
         image: null,
       },
       {
-        id: "d7",
+        id: "ex4",
         name: "Agua de Pepino con Limón",
         nameEn: "Cucumber Lime Water",
         description:
-          "La definición de frescura absoluta. Mezcla ligera y revitalizante de pepino fresco licuado con un toque de limón verde. Hidratante y perfecta.",
+          "La definición de frescura absoluta. Mezcla ligera de pepino fresco con un toque de limón verde.",
         descriptionEn:
-          "The definition of absolute freshness. A light and revitalizing blend of fresh cucumber blended with a squeeze of green lime.",
-        price: 3.50,
+          "The definition of absolute freshness. Light blend of fresh cucumber with a squeeze of lime.",
         image: null,
       },
       {
-        id: "d3",
+        id: "ex5",
         name: "Café de Olla",
         nameEn: "Clay Pot Coffee",
         description:
           "Café mexicano tradicional aromático con piloncillo oscuro y canela.",
         descriptionEn:
           "Fragrant traditional Mexican coffee brewed with dark piloncillo and cinnamon stick.",
-        price: 3.50,
-        image:
-          "/images/cafe-de-olla.png",
+        image: "/images/cafe-de-olla.png",
       },
       {
-        id: "d4",
+        id: "ex6",
         name: "Jarritos Surtidos",
         nameEn: "Assorted Jarritos",
         description:
           "Refrescos mexicanos clásicos en botella. Elige Mandarina, Tamarindo, Limón o Piña.",
         descriptionEn:
           "Classic Mexican sodas in glass bottles. Choose Mandarin, Tamarind, Lime, or Pineapple.",
-        price: 3.00,
         image: null,
       },
       {
-        id: "d5",
+        id: "ex7",
         name: "Coca-Cola Mexicana",
         nameEn: "Mexican Coca-Cola",
         description:
           "La original en botella de vidrio importada, endulzada con caña de azúcar pura. Muy fría.",
         descriptionEn:
           "The gold standard. Ice cold imported glass bottle sweetened with pure cane sugar.",
-        price: 3.50,
         image: null,
         popular: true,
       },

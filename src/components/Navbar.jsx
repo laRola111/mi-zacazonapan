@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
-import { ShoppingBag, Phone, Menu, X, Globe } from "lucide-react";
+import { Phone, Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../context/LanguageContext";
 
-export default function Navbar({ cartCount, onCartClick, activeSection }) {
+export default function Navbar({ activeSection }) {
   const { t, lang, toggleLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,14 +27,11 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
   }, []);
 
   const navLinks = [
-    { name: t.nav.inicio, href: "#inicio" },
-    { name: t.nav.breakfast, href: "#breakfast" },
-    { name: t.nav.tacos, href: "#tacos" },
-    { name: t.nav.specialties, href: "#specialties" },
-    { name: t.nav.barbacoa, href: "#barbacoa" },
-    { name: t.nav.carnes, href: "#carnes" },
-    { name: t.nav.tortillas, href: "#tortillas" },
-    { name: t.nav.contacto, href: "#contacto" },
+    { name: t.nav.inicio,     href: "#inicio" },
+    { name: t.nav.breakfast,  href: "#breakfast" },
+    { name: t.nav.carnes,     href: "#carnes" },
+    { name: t.nav.tortillas,  href: "#tortillas" },
+    { name: t.nav.contacto,   href: "#contacto" },
   ];
 
   const scrollToSection = (href) => {
@@ -155,32 +152,6 @@ export default function Navbar({ cartCount, onCartClick, activeSection }) {
             >
               <Phone className="w-4 h-4" />
             </a>
-
-            {/* Shopping Cart Trigger */}
-            <button
-              onClick={onCartClick}
-              aria-label={t.nav.cartLabel(cartCount)}
-              className="relative flex items-center gap-2 bg-mexican-red hover:bg-mexican-red/90 text-mexican-cream px-3 py-2 sm:px-4 sm:py-2.5 border border-mexican-gold shadow-[0_0_12px_rgba(197,30,30,0.4)] hover:shadow-[0_0_18px_rgba(244,196,48,0.4)] transition-all duration-300 hover:scale-105 group font-bold text-xs sm:text-sm"
-            >
-              <div className="relative">
-                <ShoppingBag className="w-4 h-4 group-hover:animate-bounce" />
-                <AnimatePresence>
-                  {cartCount > 0 && (
-                    <motion.span
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      exit={{ scale: 0 }}
-                      className="absolute -top-3.5 -right-3.5 bg-mexican-gold text-mexican-black text-[10px] w-5 h-5 flex items-center justify-center rounded-full border-2 border-mexican-black font-extrabold shadow-md shadow-black"
-                    >
-                      {cartCount > 9 ? "9+" : cartCount}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
-              </div>
-              <span className="hidden md:inline uppercase tracking-widest text-[10px]">
-                {t.nav.miOrden}
-              </span>
-            </button>
 
             {/* Mobile Menu Toggle */}
             <button

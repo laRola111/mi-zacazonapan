@@ -6,8 +6,6 @@ import MenuSection from "../components/MenuSection";
 import MeatGrill from "../components/MeatGrill";
 import HandmadeTortillas from "../components/HandmadeTortillas";
 import Contact from "../components/Contact";
-import CartDrawer from "../components/CartDrawer";
-import ExtrasBadge from "../components/ExtrasBadge";
 import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,12 +13,10 @@ import AudioPlayer from "../components/AudioPlayer";
 
 export default function Home() {
   const { t } = useLanguage();
-  const [cart, setCart] = useState([]);
-  const [isCartOpen, setIsCartOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("inicio");
   const [isLoading, setIsLoading] = useState(true);
 
-  // Lock scroll during loading screen and handle duration
+  // Lock scroll during loading screen
   useEffect(() => {
     if (isLoading) {
       document.body.style.overflow = "hidden";
@@ -36,7 +32,7 @@ export default function Home() {
 
   // Track active section for scrollspy Navbar indicator
   useEffect(() => {
-    const sections = ["inicio", "breakfast", "tacos", "specialties", "barbacoa", "carnes", "tortillas", "contacto"];
+    const sections = ["inicio", "breakfast", "carnes", "tortillas", "contacto"];
 
     const observerOptions = {
       root: null,
@@ -62,48 +58,6 @@ export default function Home() {
     return () => observer.disconnect();
   }, []);
 
-  // Cart Handlers
-  const handleAddItem = (item) => {
-    setCart((prevCart) => {
-      const existingIdx = prevCart.findIndex(
-        (i) => i.id === item.id && i.customOptions === item.customOptions
-      );
-
-      if (existingIdx > -1) {
-        return prevCart.map((i, idx) =>
-          idx === existingIdx ? { ...i, quantity: i.quantity + 1 } : i
-        );
-      }
-
-      return [...prevCart, { ...item, quantity: 1 }];
-    });
-
-    setIsCartOpen(true);
-  };
-
-  const handleUpdateQuantity = (itemId, customOptions, newQuantity) => {
-    if (newQuantity <= 0) {
-      handleRemoveItem(itemId, customOptions);
-      return;
-    }
-
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.id === itemId && item.customOptions === customOptions
-          ? { ...item, quantity: newQuantity }
-          : item
-      )
-    );
-  };
-
-  const handleRemoveItem = (itemId, customOptions) => {
-    setCart((prevCart) =>
-      prevCart.filter((item) => !(item.id === itemId && item.customOptions === customOptions))
-    );
-  };
-
-  const totalCartCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-
   return (
     <div className="min-h-screen bg-mexican-black flex flex-col font-sans select-none selection:bg-mexican-gold selection:text-mexican-black">
       {/* Premium Loader/Intro Animation */}
@@ -119,17 +73,11 @@ export default function Home() {
             {/* Saturated Warm Radial Glow */}
             <div className="absolute inset-0 opacity-80 z-0" style={{ background: "radial-gradient(circle at center, rgba(197,30,30,0.15) 0%, transparent 60%)" }} />
             <div className="absolute w-[400px] h-[400px] bg-mexican-gold/10 rounded-full blur-[100px] pointer-events-none z-0" />
-            
+
             <motion.div
               initial={{ scale: 0.85, opacity: 0 }}
-              animate={{ 
-                scale: 1,
-                opacity: 1,
-              }}
-              transition={{ 
-                duration: 0.8, 
-                ease: "easeOut"
-              }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-mexican-gold bg-[#120e0b] z-10 flex items-center justify-center shadow-[0_0_40px_rgba(244,196,48,0.3)] animate-pulse"
             >
               <img
@@ -139,7 +87,6 @@ export default function Home() {
               />
             </motion.div>
 
-            {/* Elegant Subtitle */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 0.9, y: 0 }}
@@ -158,26 +105,17 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Sticky Header Navbar */}
-      <Navbar
-        cartCount={totalCartCount}
-        onCartClick={() => setIsCartOpen(true)}
-        activeSection={activeSection}
-      />
+      <Navbar activeSection={activeSection} />
 
       {/* Main Content Layout */}
       <main className="flex-grow">
         {/* Cinematic landing hero */}
         <Hero />
 
-        {/* Dynamic menu items */}
+        {/* Dynamic menu — all sections */}
         <div id="breakfast">
-          <MenuSection onAddItem={handleAddItem} />
+          <MenuSection />
         </div>
-
-        {/* Anchor markers */}
-        <div id="tacos" className="h-1 bg-mexican-black" />
-        <div id="specialties" className="h-1 bg-mexican-black" />
-        <div id="barbacoa" className="h-1 bg-mexican-black" />
 
         {/* Tipos de carne grill section */}
         <MeatGrill />
@@ -185,28 +123,15 @@ export default function Home() {
         {/* Handmade tortillas showcase */}
         <HandmadeTortillas />
 
-        {/* Integrated interactive contact details & maps */}
+        {/* Integrated contact details & maps */}
         <Contact />
       </main>
-
-      {/* Cart Slider Drawer Overlay */}
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
-        cartItems={cart}
-        onUpdateQuantity={handleUpdateQuantity}
-        onRemoveItem={handleRemoveItem}
-      />
-
-      {/* Floating Extras Starburst Badge */}
-      <ExtrasBadge />
 
       {/* Floating Premium Background Music Player */}
       <AudioPlayer />
 
       {/* Custom Traditional Footer */}
       <footer className="bg-[#050403] border-t-2 border-mexican-gold/30 text-mexican-cream py-12 relative overflow-hidden">
-        {/* Background glow ornament */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-24 bg-mexican-red/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center">
