@@ -76,9 +76,9 @@ const translations = {
       subtitle:
         "Nuestras carnes son marinadas diariamente con recetas secretas de la casa y cocinadas a fuego lento para garantizar la máxima jugosidad.",
       callout:
-        "🌮 ¿Ya probaste los Campechanos?",
+        "🫓 Tortillas de maíz hechas a mano",
       calloutDesc:
-        "Es la combinación legendaria: carne de bistec de res tierna revuelta con nuestro chorizo artesanal bien dorado. Pídelo en tortilla de harina hecha a mano con salsa roja y cilantro fresco. ¡Es la especialidad preferida de Austin!",
+        "Cada tortilla es elaborada a mano en nuestra cocina al momento de tu orden. Masa de maíz criollo nixtamalizado, prensada y cocinada en comal caliente. El auténtico sabor que hace único cada taco y platillo de Mi Zacazonapan.",
     },
 
     // Handmade Tortillas
@@ -238,9 +238,9 @@ const translations = {
       title: "Our Meats",
       subtitle:
         "Our meats are marinated daily with our secret house recipes and slow-cooked to guarantee maximum juiciness and flavor.",
-      callout: "🌮 Have you tried the Campechanos?",
+      callout: "🫓 Handmade Corn Tortillas",
       calloutDesc:
-        "The legendary combination: tender beef steak mixed with our house-crafted golden chorizo. Order it in a handmade flour tortilla with red salsa and fresh cilantro. Austin's #1 favorite!",
+        "Every tortilla is hand-pressed in our kitchen the moment you order. Made from nixtamalized heirloom corn masa, pressed by hand and cooked on a hot comal. The authentic taste that makes every taco and dish at Mi Zacazonapan truly special.",
     },
 
     // Handmade Tortillas

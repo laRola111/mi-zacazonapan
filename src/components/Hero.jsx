@@ -187,9 +187,10 @@ export default function Hero() {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-[8px] double border-mexican-gold shadow-[0_20px_50px_rgba(0,0,0,0.9)] relative bg-[#120e0b]">
               <img
-                src="/images/tacos (2).png"
+                src="/images/tacos-portada.png"
                 alt="Deliciosos Tacos de Mi Zacazonapan — Handmade Tortillas"
-                loading="lazy"
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
                 className="w-full h-full object-cover object-center scale-105 select-none filter saturate-125 contrast-110 brightness-95"
               />

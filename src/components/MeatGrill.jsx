@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Flame } from "lucide-react";
-import { MEATS_DATA } from "../data/menu";
+import { MEATS_DATA, PLATILLOS_DATA, TOPPINGS_DATA } from "../data/menu";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function MeatGrill() {
@@ -101,7 +101,7 @@ export default function MeatGrill() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="flex items-center gap-4 px-5 py-3.5 border-b border-[#6B3E1F]/25 last:border-b-0 group hover:bg-[#E31B23]/8 transition-colors duration-200"
+                className="flex items-center gap-4 px-5 py-3.5 border-b border-[#6B3E1F]/25 last:border-b-0 group hover:bg-[#E31B23]/10 transition-colors duration-200"
               >
                 <span className="text-xl shrink-0">{meat.icon}</span>
                 <div className="flex-1">
@@ -150,7 +150,7 @@ export default function MeatGrill() {
           </div>
         </div>
 
-        {/* ── Callout box — Campechanos ── */}
+        {/* ── Callout box — Tortillas de maíz hechas a mano ── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -170,6 +170,85 @@ export default function MeatGrill() {
             {t.grill.calloutDesc}
           </p>
         </motion.div>
+
+        {/* ── PLATILLOS ── */}
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <span className="font-condensed text-[#E31B23] text-[10px] sm:text-xs uppercase tracking-[0.25em] block mb-2">
+              {lang === "es" ? "ESPECIALIDADES" : "SPECIALTIES"}
+            </span>
+            <h3 className="mexican-title text-3xl sm:text-4xl uppercase">
+              {lang === "es" ? "Platillos" : "Dishes"}
+            </h3>
+            <p className="font-condensed text-[#F8F1E5]/45 text-xs uppercase tracking-widest mt-2">
+              {lang === "es" ? "A la carta · Arroz y frijoles · Tortillas a mano" : "A la carte · Rice & beans · Handmade tortillas"}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {PLATILLOS_DATA.map((p, i) => (
+              <motion.div
+                key={p.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.07 }}
+                className="flex flex-col items-center bg-[#0d0c0c] border border-[#6B3E1F]/60 hover:border-[#F9E014]/60 transition-all duration-300 overflow-hidden group"
+              >
+                {p.image ? (
+                  <div className="w-full h-28 overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={lang === "en" && p.nameEn ? p.nameEn : p.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover filter saturate-110 brightness-90 group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full h-28 flex items-center justify-center bg-[#E31B23]/10">
+                    <span className="text-4xl">{p.icon}</span>
+                  </div>
+                )}
+                <div className="p-3 text-center">
+                  <p className="font-oswald text-[#F9E014] text-xs uppercase tracking-wide leading-tight">
+                    {lang === "en" && p.nameEn ? p.nameEn : p.name}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* ── TOPPINGS / INGREDIENTES ── */}
+        <div className="mt-16 mb-4">
+          <div className="text-center mb-8">
+            <span className="font-condensed text-[#E31B23] text-[10px] sm:text-xs uppercase tracking-[0.25em] block mb-2">
+              {lang === "es" ? "PERSONALIZA TU ORDEN" : "CUSTOMIZE YOUR ORDER"}
+            </span>
+            <h3 className="mexican-title text-3xl sm:text-4xl uppercase">
+              {lang === "es" ? "Carnes de tu Elección" : "Toppings & Extras"}
+            </h3>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+            {TOPPINGS_DATA.map((tp, i) => (
+              <motion.div
+                key={tp.name}
+                initial={{ opacity: 0, scale: 0.85 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+                className="flex flex-col items-center gap-2 p-3 bg-[#0d0c0c] border border-[#6B3E1F]/50 hover:border-[#F9E014]/60 hover:bg-[#E31B23]/8 transition-all duration-200 text-center"
+              >
+                <span className="text-2xl">{tp.icon}</span>
+                <p className="font-oswald text-[#F8F1E5] text-[11px] uppercase tracking-wide leading-tight">
+                  {lang === "en" && tp.nameEn ? tp.nameEn : tp.name}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -50,7 +50,7 @@ export default function MenuSection() {
       </div>
 
       {/* ── CATEGORY TABS — scrollable horizontal on mobile ── */}
-      <div className="overflow-x-auto border-b border-[#6B3E1F]/40 bg-[#0d0c0c]">
+      <div className="overflow-x-auto scrollbar-hide border-b border-[#6B3E1F]/40 bg-[#0d0c0c]">
         <div className="flex items-center gap-2 py-5 px-4 min-w-max mx-auto justify-start sm:justify-center">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat.id;

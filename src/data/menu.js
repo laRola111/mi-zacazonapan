@@ -15,9 +15,9 @@ export const MENU_DATA = {
         name: "Huevos Rancheros",
         nameEn: "Ranchero Eggs",
         description:
-          "Dos huevos frescos sobre tortillas de maíz calientes, bañados en salsa ranchera, queso fresco, cilantro y frijoles negros refritos.",
+          "Dos huevos frescos sobre tortillas de maíz calientes, bañados en salsa ranchera, queso fresco y cilantro.",
         descriptionEn:
-          "Two farm-fresh eggs on hot corn tortillas, smothered in ranchera sauce, queso fresco, cilantro, and refried beans.",
+          "Two farm-fresh eggs on hot corn tortillas, smothered in ranchera sauce, queso fresco, and cilantro.",
         image: "/images/huevos-rancheros.png",
         spicy: true,
         popular: true,
@@ -39,9 +39,9 @@ export const MENU_DATA = {
         name: "Burrito de Desayuno",
         nameEn: "Breakfast Burrito",
         description:
-          "Tortilla de harina gigante hecha a mano, rellena de huevo revuelto, papas crujientes, frijoles refritos, queso cheddar y salsa verde.",
+          "Burrito ala carta con arroz y frijoles.",
         descriptionEn:
-          "Giant handmade warm flour tortilla stuffed with scrambled eggs, crispy potatoes, refried beans, cheddar blend, and green salsa.",
+          "Burrito a la carte with rice and beans.",
         image: "/images/burrito (3).png",
         popular: true,
         customizable: true,
@@ -62,9 +62,9 @@ export const MENU_DATA = {
         name: "Huevito en Salsa",
         nameEn: "Eggs in Salsa",
         description:
-          "Huevos revueltos cocinados en salsa de jitomate tatemado con jalapeño. Se sirven con frijoles refritos y tortillas de maíz hechas a mano.",
+          "Arroz, frijoles y cecina.",
         descriptionEn:
-          "Scrambled eggs cooked in a fire-roasted tomato and jalapeño salsa. Served with refried beans and handmade corn tortillas.",
+          "Rice, beans and cecina.",
         image: "/images/huevito en salasa.png",
         spicy: true,
       },
@@ -73,9 +73,9 @@ export const MENU_DATA = {
         name: "Vegetariano",
         nameEn: "Vegetarian Breakfast",
         description:
-          "Huevos de granja revueltos con nopales tiernos salteados, cebolla, jitomate, pimiento morrón y rebanadas de aguacate fresco.",
+          "Huevos de granja revueltos con nopales tiernos salteados, cebolla, jitomate, jalapeño y rebanadas de aguacate fresco.",
         descriptionEn:
-          "Farm eggs scrambled with sautéed baby nopales, sweet onions, juicy tomatoes, bell peppers, and fresh sliced avocado.",
+          "Farm eggs scrambled with sautéed baby nopales, sweet onions, juicy tomatoes, jalapeño, and fresh sliced avocado.",
         image: "/images/vegetariano.png",
       },
       {
@@ -509,8 +509,8 @@ export const MEATS_DATA = [
   {
     name: "Fajita de Res",
     nameEn: "Beef Fajita",
-    description: "c/Cebolla/Morrón",
-    descriptionEn: "with Onion & Bell Pepper",
+    description: "c/Cebolla y Jalapeño asado",
+    descriptionEn: "with Onion & Roasted Jalapeño",
     icon: "🥩",
   },
   {
@@ -537,8 +537,8 @@ export const MEATS_DATA = [
   {
     name: "Fajita de Pollo",
     nameEn: "Chicken Fajita",
-    description: "c/Cilantro/Morrón",
-    descriptionEn: "with Cilantro & Bell Pepper",
+    description: "c/Cebolla y Jalapeño asado",
+    descriptionEn: "with Onion & Roasted Jalapeño",
     icon: "🍗",
   },
   {
@@ -578,11 +578,11 @@ export const MEATS_DATA = [
     icon: "🌮",
   },
   {
-    name: "Campechanos",
-    nameEn: "Campechano Mix",
-    description: "c/Nopales/Cebolla",
-    descriptionEn: "with Nopales & Onion",
-    icon: "💥",
+    name: "Barbacoa de Chivo",
+    nameEn: "Goat Barbacoa",
+    description: "c/Cilantro/Cebolla",
+    descriptionEn: "with Cilantro & Onion",
+    icon: "🐐",
   },
   {
     name: "Suadero",
@@ -599,10 +599,83 @@ export const MEATS_DATA = [
     icon: "💀",
   },
   {
-    name: "Fajita Campechana",
-    nameEn: "Mixed Fajita",
-    description: "c/Cebolla/Morrón",
-    descriptionEn: "with Onion & Bell Pepper",
-    icon: "🔥",
+    name: "Nopalitos y Cebolla Asada",
+    nameEn: "Nopales & Roasted Onion",
+    description: "c/Cilantro/Salsa",
+    descriptionEn: "with Cilantro & Salsa",
+    icon: "🌵",
+  },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TOPPINGS — Ingredientes disponibles para personalizar
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const TOPPINGS_DATA = [
+  { name: "Cecina",        nameEn: "Cecina",          icon: "🥩" },
+  { name: "Chorizo",       nameEn: "Chorizo",          icon: "🌶️" },
+  { name: "Adobada",       nameEn: "Adobada",          icon: "🍖" },
+  { name: "Jamón",         nameEn: "Ham",              icon: "🍖" },
+  { name: "Salchicha",     nameEn: "Sausage",          icon: "🌭" },
+  { name: "Piña Asada",    nameEn: "Grilled Pineapple",icon: "🍍" },
+  { name: "Lechuga",       nameEn: "Lettuce",          icon: "🥬" },
+  { name: "Aguacate",      nameEn: "Avocado",          icon: "🥑" },
+  { name: "Jitomate",      nameEn: "Tomato",           icon: "🍅" },
+  { name: "Mayonesa",      nameEn: "Mayonnaise",       icon: "🥣" },
+  { name: "Mantequilla",   nameEn: "Butter",           icon: "🧈" },
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PLATILLOS — Platillos especiales de la carta
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const PLATILLOS_DATA = [
+  {
+    name: "Quesabirria",
+    nameEn: "Quesabirria",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🧀",
+    image: "/images/quesabirria.png",
+  },
+  {
+    name: "Quesadilla",
+    nameEn: "Quesadilla",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🫓",
+    image: "/images/quesadilla (2).png",
+  },
+  {
+    name: "Picaditas",
+    nameEn: "Picaditas",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🌽",
+    image: null,
+  },
+  {
+    name: "Sopes",
+    nameEn: "Sopes",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🫓",
+    image: "/images/sopes (2).png",
+  },
+  {
+    name: "Bistec Ranchero",
+    nameEn: "Ranchero Steak",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🥩",
+    image: null,
+  },
+  {
+    name: "Chicharrón",
+    nameEn: "Chicharron",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🐷",
+    image: null,
   },
 ];

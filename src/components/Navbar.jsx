@@ -76,11 +76,11 @@ export default function Navbar({ activeSection }) {
                 className="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(244,196,48,0.5)]"
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-western text-lg tracking-wider text-mexican-gold uppercase leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-western text-base sm:text-lg tracking-wider text-mexican-gold uppercase leading-tight truncate">
                 Mi Zacazonapan
               </span>
-              <span className="text-[9px] tracking-widest text-mexican-cream/80 uppercase font-sans font-bold -mt-0.5">
+              <span className="hidden sm:block text-[9px] tracking-widest text-mexican-cream/80 uppercase font-sans font-bold -mt-0.5">
                 Taquería Premium
               </span>
             </div>
