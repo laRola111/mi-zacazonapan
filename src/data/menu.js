@@ -86,7 +86,7 @@ export const MENU_DATA = {
           "Totopos caseros en salsa roja o verde, cubiertos con dos huevos fritos, crema mexicana, queso cotija y aguacate fresco.",
         descriptionEn:
           "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso cotija, and fresh avocado.",
-        image: "/images/chilaquiles.png",
+        image: "/images/chilaquiles-2.png",
         spicy: true,
         popular: true,
       },
