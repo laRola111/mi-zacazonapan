@@ -24,20 +24,20 @@
 }
 
 :root {
-  /* ─── TEMPORARY LIGHT THEME ACTIVE ─── */
-  --mexican-black: #FCF9F2;
-  --mexican-cream: #1C1917;
-  --mexican-red: #C8102E;
-  --mexican-gold: #B58A00;
-  --mexican-orange: #D35400;
-  --mexican-wood: #5C3A21;
+  /* ─── TEMPORARY CAFE THEME ACTIVE ─── */
+  --mexican-black: #623135;
+  --mexican-cream: #FCF9F2;
+  --mexican-red: #E31B23;
+  --mexican-gold: #F9E014;
+  --mexican-orange: #E67E22;
+  --mexican-wood: #4A2023;
 
-  --mexican-black-rgb: 252, 249, 242;
-  --mexican-cream-rgb: 28, 25, 23;
-  --mexican-red-rgb: 200, 16, 46;
-  --mexican-gold-rgb: 181, 138, 0;
-  --mexican-orange-rgb: 211, 84, 0;
-  --mexican-wood-rgb: 92, 58, 33;
+  --mexican-black-rgb: 98, 49, 53;
+  --mexican-cream-rgb: 252, 249, 242;
+  --mexican-red-rgb: 227, 27, 35;
+  --mexican-gold-rgb: 249, 224, 20;
+  --mexican-orange-rgb: 230, 126, 34;
+  --mexican-wood-rgb: 74, 32, 35;
 
   /* ─── ORIGINAL DARK THEME (SAVED TO REVERT) ───
   --mexican-black: #0A0A0A;
@@ -320,3 +320,13 @@ body {
 /* Hover highlight elements */
 .hover\:bg-\[\#E31B23\]\/10:hover { background-color: rgba(var(--mexican-red-rgb), 0.1) !important; }
 .hover\:bg-\[\#E31B23\]\/8:hover { background-color: rgba(var(--mexican-red-rgb), 0.08) !important; }
+
+/* Remove card shadow from dishes */
+.shadow-\[0_4px_20px_rgba\(0\,0\,0\,0\.6\)\] {
+  box-shadow: none !important;
+}
+
+/* Remove text shadow from dish titles */
+.dish-title {
+  text-shadow: none !important;
+}
