@@ -3,13 +3,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Brand Colours (matched to physical menu) ── */
-  --color-mexican-black:  #0A0A0A;
-  --color-mexican-red:    #E31B23;   /* #E31B23 — vibrant taquería red */
-  --color-mexican-gold:   #F9E014;   /* #F9E014 — high-contrast yellow */
-  --color-mexican-orange: #E67E22;
-  --color-mexican-wood:   #6B3E1F;
-  --color-mexican-cream:  #F8F1E5;
+  /* ── Brand Colours (mapped to CSS variables) ── */
+  --color-mexican-black:  var(--mexican-black);
+  --color-mexican-red:    var(--mexican-red);
+  --color-mexican-gold:   var(--mexican-gold);
+  --color-mexican-orange: var(--mexican-orange);
+  --color-mexican-wood:   var(--mexican-wood);
+  --color-mexican-cream:  var(--mexican-cream);
 
   /* ── Font families ── */
   --font-western:   "Rye", cursive;
@@ -24,15 +24,46 @@
 }
 
 :root {
-  --background: #0A0A0A;
-  --foreground: #F8F1E5;
+  /* ─── TEMPORARY LIGHT THEME ACTIVE ─── */
+  --mexican-black: #FCF9F2;
+  --mexican-cream: #1C1917;
+  --mexican-red: #C8102E;
+  --mexican-gold: #B58A00;
+  --mexican-orange: #D35400;
+  --mexican-wood: #5C3A21;
+
+  --mexican-black-rgb: 252, 249, 242;
+  --mexican-cream-rgb: 28, 25, 23;
+  --mexican-red-rgb: 200, 16, 46;
+  --mexican-gold-rgb: 181, 138, 0;
+  --mexican-orange-rgb: 211, 84, 0;
+  --mexican-wood-rgb: 92, 58, 33;
+
+  /* ─── ORIGINAL DARK THEME (SAVED TO REVERT) ───
+  --mexican-black: #0A0A0A;
+  --mexican-cream: #F8F1E5;
+  --mexican-red: #E31B23;
+  --mexican-gold: #F9E014;
+  --mexican-orange: #E67E22;
+  --mexican-wood: #6B3E1F;
+
+  --mexican-black-rgb: 10, 10, 10;
+  --mexican-cream-rgb: 248, 241, 229;
+  --mexican-red-rgb: 227, 27, 35;
+  --mexican-gold-rgb: 249, 224, 20;
+  --mexican-orange-rgb: 230, 126, 34;
+  --mexican-wood-rgb: 107, 62, 31;
+  */
+
+  --background: var(--mexican-black);
+  --foreground: var(--mexican-cream);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
-  background-color: #0A0A0A;
-  color: #F8F1E5;
+  background-color: var(--mexican-black);
+  color: var(--mexican-cream);
   font-family: "Outfit", sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -54,51 +85,51 @@ body {
 
 .mexican-title {
   font-family: "Rye", Georgia, serif;
-  color: #F9E014;
+  color: var(--mexican-gold);
   text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-     4px  4px 0px #E31B23,
-     6px  6px 8px rgba(0, 0, 0, 0.8);
+    -2px -2px 0 var(--mexican-black),
+     2px -2px 0 var(--mexican-black),
+    -2px  2px 0 var(--mexican-black),
+     2px  2px 0 var(--mexican-black),
+     4px  4px 0px var(--mexican-red),
+     6px  6px 8px rgba(var(--mexican-cream-rgb), 0.3);
 }
 
 .mexican-title-red {
   font-family: "Rye", Georgia, serif;
-  color: #E31B23;
+  color: var(--mexican-red);
   text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-     4px  4px 0px #F9E014,
-     6px  6px 8px rgba(0, 0, 0, 0.8);
+    -2px -2px 0 var(--mexican-black),
+     2px -2px 0 var(--mexican-black),
+    -2px  2px 0 var(--mexican-black),
+     2px  2px 0 var(--mexican-black),
+     4px  4px 0px var(--mexican-gold),
+     6px  6px 8px rgba(var(--mexican-cream-rgb), 0.3);
 }
 
 .mexican-title-cream {
   font-family: "Rye", Georgia, serif;
-  color: #F8F1E5;
+  color: var(--mexican-cream);
   text-shadow:
-    -2px -2px 0 #000,
-     2px -2px 0 #000,
-    -2px  2px 0 #000,
-     2px  2px 0 #000,
-     4px  4px 0px #E31B23,
-     6px  6px 8px rgba(0, 0, 0, 0.8);
+    -2px -2px 0 var(--mexican-black),
+     2px -2px 0 var(--mexican-black),
+    -2px  2px 0 var(--mexican-black),
+     2px  2px 0 var(--mexican-black),
+     4px  4px 0px var(--mexican-red),
+     6px  6px 8px rgba(var(--mexican-cream-rgb), 0.3);
 }
 
 /* ── Sancreek — dish card titles ─────────────────────────── */
 .dish-title {
   font-family: "Sancreek", "Smokum", Georgia, serif;
-  color: #F9E014;
+  color: var(--mexican-gold);
   letter-spacing: 0.05em;
   text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000,
-     2px  3px 0 rgba(0, 0, 0, 0.7);
+    -1px -1px 0 var(--mexican-black),
+     1px -1px 0 var(--mexican-black),
+    -1px  1px 0 var(--mexican-black),
+     1px  1px 0 var(--mexican-black),
+     2px  3px 0 rgba(var(--mexican-cream-rgb), 0.2);
 }
 
 /* ── Barlow Condensed — ingredient / meat lists ───────────── */
@@ -117,11 +148,11 @@ body {
 .font-alfa {
   font-family: "Alfa Slab One", Georgia, serif;
   text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000,
-     2px  3px 0 rgba(0, 0, 0, 0.7);
+    -1px -1px 0 var(--mexican-black),
+     1px -1px 0 var(--mexican-black),
+    -1px  1px 0 var(--mexican-black),
+     1px  1px 0 var(--mexican-black),
+     2px  3px 0 rgba(var(--mexican-cream-rgb), 0.2);
 }
 
 /* Western font utility for inline use */
@@ -135,10 +166,10 @@ body {
    ============================================================ */
 
 .menu-header-band {
-  background: linear-gradient(135deg, #E31B23 0%, #b81018 100%);
-  border-top:    3px solid #F9E014;
-  border-bottom: 3px solid #F9E014;
-  box-shadow: 0 4px 20px rgba(227, 27, 35, 0.5);
+  background: linear-gradient(135deg, var(--mexican-red) 0%, #a00b12 100%);
+  border-top:    3px solid var(--mexican-gold);
+  border-bottom: 3px solid var(--mexican-gold);
+  box-shadow: 0 4px 20px rgba(var(--mexican-red-rgb), 0.3);
 }
 
 /* ============================================================
@@ -146,13 +177,13 @@ body {
    ============================================================ */
 
 .gold-border {
-  border: 3px double #F9E014;
-  box-shadow: 0 0 15px rgba(249, 224, 20, 0.15), inset 0 0 15px rgba(249, 224, 20, 0.1);
+  border: 3px double var(--mexican-gold);
+  box-shadow: 0 0 15px rgba(var(--mexican-gold-rgb), 0.1), inset 0 0 15px rgba(var(--mexican-gold-rgb), 0.05);
 }
 
 .gold-border-thin {
-  border: 1px solid rgba(249, 224, 20, 0.35);
-  box-shadow: 0 0 8px rgba(249, 224, 20, 0.08);
+  border: 1px solid rgba(var(--mexican-gold-rgb), 0.35);
+  box-shadow: 0 0 8px rgba(var(--mexican-gold-rgb), 0.08);
 }
 
 .gold-glow-hover {
@@ -160,8 +191,8 @@ body {
 }
 
 .gold-glow-hover:hover {
-  border-color: #F9E014;
-  box-shadow: 0 0 20px rgba(249, 224, 20, 0.35), inset 0 0 10px rgba(249, 224, 20, 0.15);
+  border-color: var(--mexican-gold);
+  box-shadow: 0 0 20px rgba(var(--mexican-gold-rgb), 0.25), inset 0 0 10px rgba(var(--mexican-gold-rgb), 0.1);
   transform: translateY(-2px);
 }
 
@@ -170,21 +201,19 @@ body {
    ============================================================ */
 
 .wood-panel {
-  background-color: #120E0B;
+  background-color: var(--mexican-black);
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)),
-    repeating-linear-gradient(rgba(107, 62, 31, 0.05) 0px, rgba(107, 62, 31, 0.05) 4px, rgba(0,0,0,0) 4px, rgba(0,0,0,0) 8px),
-    linear-gradient(90deg, rgba(107, 62, 31, 0.1), rgba(0, 0, 0, 0));
-  border: 2px solid #6B3E1F;
+    repeating-linear-gradient(rgba(var(--mexican-wood-rgb), 0.03) 0px, rgba(var(--mexican-wood-rgb), 0.03) 4px, transparent 4px, transparent 8px);
+  border: 2px solid var(--mexican-wood);
 }
 
 /* Dark menu card background — deep neutral with subtle texture */
 .menu-card-bg {
-  background-color: #111010;
+  background-color: var(--mexican-black);
   background-image:
     repeating-linear-gradient(
-      rgba(107, 62, 31, 0.04) 0px,
-      rgba(107, 62, 31, 0.04) 2px,
+      rgba(var(--mexican-wood-rgb), 0.02) 0px,
+      rgba(var(--mexican-wood-rgb), 0.02) 2px,
       transparent 2px,
       transparent 6px
     );
@@ -200,15 +229,15 @@ body {
    ============================================================ */
 
 .red-ambient-glow {
-  background: radial-gradient(circle at center, rgba(227, 27, 35, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+  background: radial-gradient(circle at center, rgba(var(--mexican-red-rgb), 0.1) 0%, transparent 70%);
 }
 
 .gold-ambient-glow {
-  background: radial-gradient(circle at center, rgba(249, 224, 20, 0.1) 0%, rgba(10, 10, 10, 0) 70%);
+  background: radial-gradient(circle at center, rgba(var(--mexican-gold-rgb), 0.08) 0%, transparent 70%);
 }
 
 .orange-ambient-glow {
-  background: radial-gradient(circle at center, rgba(230, 126, 34, 0.12) 0%, rgba(10, 10, 10, 0) 70%);
+  background: radial-gradient(circle at center, rgba(var(--mexican-orange-rgb), 0.08) 0%, transparent 70%);
 }
 
 /* ============================================================
@@ -248,6 +277,46 @@ body {
    ============================================================ */
 
 ::-webkit-scrollbar        { width: 8px; }
-::-webkit-scrollbar-track  { background: #0A0A0A; }
-::-webkit-scrollbar-thumb  { background: #6B3E1F; border: 2px solid #0A0A0A; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #E31B23; }
+::-webkit-scrollbar-track  { background: var(--mexican-black); }
+::-webkit-scrollbar-thumb  { background: var(--mexican-wood); border: 2px solid var(--mexican-black); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mexican-red); }
+
+/* ============================================================
+   LIGHT MODE OVERRIDES FOR HARDCODED VALUES
+   ============================================================ */
+
+/* Force hardcoded dark backgrounds in sections and grids to use our variable theme background */
+.bg-\[\#111010\],
+.bg-\[\#0d0c0c\],
+.bg-\[\#050403\],
+.bg-\[\#060403\],
+.bg-\[\#070605\],
+.bg-\[\#120e0b\] {
+  background-color: var(--mexican-black) !important;
+  background-image: none !important;
+}
+
+/* Force hardcoded cream/light text to use our variable theme text (dark cream/charcoal) */
+.text-\[\#F8F1E5\] { color: var(--mexican-cream) !important; }
+.text-\[\#F8F1E5\]\/70 { color: rgba(var(--mexican-cream-rgb), 0.7) !important; }
+.text-\[\#F8F1E5\]\/60 { color: rgba(var(--mexican-cream-rgb), 0.6) !important; }
+.text-\[\#F8F1E5\]\/55 { color: rgba(var(--mexican-cream-rgb), 0.55) !important; }
+.text-\[\#F8F1E5\]\/50 { color: rgba(var(--mexican-cream-rgb), 0.5) !important; }
+.text-\[\#F8F1E5\]\/45 { color: rgba(var(--mexican-cream-rgb), 0.45) !important; }
+.text-\[\#F8F1E5\]\/80 { color: rgba(var(--mexican-cream-rgb), 0.8) !important; }
+
+/* Force hardcoded borders */
+.border-\[\#6B3E1F\]\/40 { border-color: rgba(var(--mexican-wood-rgb), 0.25) !important; }
+.border-\[\#6B3E1F\]\/70 { border-color: rgba(var(--mexican-wood-rgb), 0.5) !important; }
+.border-\[\#6B3E1F\]\/30 { border-color: rgba(var(--mexican-wood-rgb), 0.15) !important; }
+.border-\[\#6B3E1F\]\/50 { border-color: rgba(var(--mexican-wood-rgb), 0.3) !important; }
+.border-\[\#6B3E1F\] { border-color: var(--mexican-wood) !important; }
+.border-\[\#0A0A0A\] { border-color: var(--mexican-black) !important; }
+
+/* In the mobile menu and other layout boundaries, update border colors */
+.border-mexican-gold\/30 { border-color: rgba(var(--mexican-gold-rgb), 0.25) !important; }
+.border-mexican-gold\/50 { border-color: rgba(var(--mexican-gold-rgb), 0.45) !important; }
+
+/* Hover highlight elements */
+.hover\:bg-\[\#E31B23\]\/10:hover { background-color: rgba(var(--mexican-red-rgb), 0.1) !important; }
+.hover\:bg-\[\#E31B23\]\/8:hover { background-color: rgba(var(--mexican-red-rgb), 0.08) !important; }
