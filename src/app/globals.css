@@ -330,3 +330,29 @@ body {
 .dish-title {
   text-shadow: none !important;
 }
+
+/* 
+   ============================================================
+   REMOVING CARD BOXES, BORDERS & SHADOWS FOR TRANSPARENT PNGs
+   ============================================================ 
+*/
+article {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide the dark gradient overlay over images */
+article .bg-gradient-to-t {
+  display: none !important;
+}
+
+/* Make image wrapper backgrounds transparent */
+article .shrink-0 {
+  background-color: transparent !important;
+}
+
+/* Ensure transparent PNGs fit nicely without cover crop */
+article img {
+  object-fit: contain !important;
+}
