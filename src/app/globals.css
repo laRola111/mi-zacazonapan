@@ -356,3 +356,21 @@ article .shrink-0 {
 article img {
   object-fit: contain !important;
 }
+
+/* Remove backgrounds and borders for Platillos grid items */
+.grid-cols-2.sm\:grid-cols-3 .group {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure images in Platillos section are not cropped */
+.grid-cols-2.sm\:grid-cols-3 .group img {
+  object-fit: contain !important;
+}
+
+/* Remove backgrounds and borders for Toppings grid items */
+.grid-cols-3.sm\:grid-cols-4.md\:grid-cols-6 .flex-col {
+  background-color: transparent !important;
+  border: none !important;
+}
