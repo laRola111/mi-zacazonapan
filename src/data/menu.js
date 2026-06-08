@@ -27,9 +27,9 @@ export const MENU_DATA = {
         name: "Breakfast Tacos",
         nameEn: "Breakfast Tacos",
         description:
-          "Tres tacos en tortilla de harina hecha a mano, rellenos de huevo revuelto, tu elección de carne, queso y pico de gallo fresco.",
+          "Taco de desayuno individual (por pieza) en tortilla hecha a mano (harina o maíz). Relleno de huevo revuelto con tu ingrediente a elegir: tocino, papa, chorizo, jamón, salchicha, chicharrón, frijol, migas o a la mexicana. Se pueden añadir ingredientes extras.",
         descriptionEn:
-          "Three handmade flour tortilla tacos filled with scrambled eggs, your choice of meat, melted cheese, and fresh pico de gallo.",
+          "Single breakfast taco on a handmade tortilla (flour or corn). Filled with scrambled eggs and your choice of ingredient: bacon, potato, chorizo, ham, sausage, pork rind, beans, migas, or Mexican style. Extra ingredients can be added.",
         image: "/images/breackfast-tacos.png",
         customizable: true,
         popular: true,
@@ -83,9 +83,9 @@ export const MENU_DATA = {
         name: "Chilaquiles",
         nameEn: "Chilaquiles",
         description:
-          "Totopos caseros en salsa roja o verde, cubiertos con dos huevos fritos, crema mexicana, queso cotija y aguacate fresco.",
+          "Totopos caseros en salsa roja o verde, cubiertos con dos huevos fritos, crema mexicana, queso fresco y aguacate fresco.",
         descriptionEn:
-          "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso cotija, and fresh avocado.",
+          "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso fresco, and fresh avocado.",
         image: "/images/chilaquiles-2.png",
         spicy: true,
         popular: true,
@@ -294,15 +294,27 @@ export const MENU_DATA = {
     items: [
       {
         id: "bu1",
-        name: "Burrito Personalizado",
-        nameEn: "Build Your Own Burrito",
+        name: "Burrito a la Carta (Armado al gusto)",
+        nameEn: "A La Carte Burrito (Build Your Own)",
         description:
-          "Crea tu burrito ideal: elige tu carne, frijoles, arroz, quesos derretidos, verduras frescas y salsas de la casa.",
+          "Crea tu burrito ideal a la carta: elige tu carne, frijoles, arroz, quesos derretidos, verduras frescas y salsas de la casa.",
         descriptionEn:
-          "Customize your dream burrito: choose your meat, beans, rice, melted cheeses, fresh veggies, and house salsas.",
+          "Customize your dream burrito a la carte: choose your meat, beans, rice, melted cheeses, fresh veggies, and house salsas.",
         image: "/images/burrito (2).png",
         customizable: true,
         popular: true,
+      },
+      {
+        id: "bu2",
+        name: "Plato de Burrito",
+        nameEn: "Burrito Platter",
+        description:
+          "Tu burrito favorito servido en plato, acompañado con arroz y frijoles.",
+        descriptionEn:
+          "Your favorite burrito served on a plate, accompanied by a side of rice and beans.",
+        image: "/images/burrito (3).png",
+        customizable: true,
+        popular: false,
       },
     ],
   },
@@ -329,9 +341,9 @@ export const MENU_DATA = {
         name: "Picaditas",
         nameEn: "Picaditas",
         description:
-          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, salsa verde o roja, queso cotija, cebolla y crema.",
+          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, salsa verde o roja, queso fresco, cebolla y crema.",
         descriptionEn:
-          "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso cotija, onions, and crema.",
+          "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso fresco, onions, and crema.",
         image: null,
         spicy: true,
       },
@@ -555,6 +567,20 @@ export const MEATS_DATA = [
     descriptionEn: "with Cilantro & Onion",
     icon: "👑",
   },
+  {
+    name: "Campechano",
+    nameEn: "Campechano",
+    description: "Mezcla de carnes (Asada y Chorizo)",
+    descriptionEn: "Mixed meats (Steak & Chorizo)",
+    icon: "🌮",
+  },
+  {
+    name: "Chicharrón",
+    nameEn: "Pork Rind",
+    description: "En salsa verde o roja",
+    descriptionEn: "In green or red sauce",
+    icon: "🐷",
+  },
   // ── Columna Derecha ──────────────────────────────────────────────────────
   {
     name: "Cecina",
@@ -573,8 +599,8 @@ export const MEATS_DATA = [
   {
     name: "Pastor",
     nameEn: "Al Pastor",
-    description: "c/Nopales/Cebolla",
-    descriptionEn: "with Nopales & Onion",
+    description: "c/Nopales/Cebolla y Piña al gusto",
+    descriptionEn: "with Nopales, Onion & Pineapple to taste",
     icon: "🌮",
   },
   {
@@ -585,22 +611,15 @@ export const MEATS_DATA = [
     icon: "🐐",
   },
   {
-    name: "Suadero",
-    nameEn: "Beef Suadero",
+    name: "Cabeza de Res",
+    nameEn: "Beef Head",
     description: "c/Cilantro/Cebolla",
     descriptionEn: "with Cilantro & Onion",
     icon: "🥩",
   },
   {
-    name: "Cabeza de Res",
-    nameEn: "Beef Head",
-    description: "c/Cilantro/Cebolla",
-    descriptionEn: "with Cilantro & Onion",
-    icon: "💀",
-  },
-  {
-    name: "Nopalitos y Cebolla Asada",
-    nameEn: "Nopales & Roasted Onion",
+    name: "Taco Vegetariano (Nopalitos y Cebolla Asada)",
+    nameEn: "Vegetarian Taco (Nopales & Roasted Onion)",
     description: "c/Cilantro/Salsa",
     descriptionEn: "with Cilantro & Salsa",
     icon: "🌵",
