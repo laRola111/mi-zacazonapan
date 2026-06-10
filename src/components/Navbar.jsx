@@ -71,7 +71,7 @@ export default function Navbar({ activeSection }) {
           >
             <div className="relative w-12 h-12 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Mi Zacazonapan Logo"
                 className="w-full h-full object-contain filter drop-shadow-[0_0_4px_rgba(244,196,48,0.5)]"
               />

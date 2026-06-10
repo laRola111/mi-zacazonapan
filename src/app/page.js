@@ -81,7 +81,7 @@ export default function Home() {
               className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-mexican-gold bg-[#120e0b] z-10 flex items-center justify-center shadow-[0_0_40px_rgba(244,196,48,0.3)] animate-pulse"
             >
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt="Mi Zacazonapan Logo"
                 className="w-[85%] h-[85%] object-contain filter drop-shadow-[0_0_8px_rgba(244,196,48,0.6)]"
               />

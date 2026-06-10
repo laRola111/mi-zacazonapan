@@ -18,7 +18,7 @@ export const MENU_DATA = {
           "Dos huevos frescos sobre tortillas de maíz calientes, bañados en salsa ranchera, queso fresco y cilantro.",
         descriptionEn:
           "Two farm-fresh eggs on hot corn tortillas, smothered in ranchera sauce, queso fresco, and cilantro.",
-        image: "/images/huevos-rancheros.png",
+        image: "/images/huevos-rancheros.webp",
         spicy: true,
         popular: true,
       },
@@ -30,7 +30,7 @@ export const MENU_DATA = {
           "Taco de desayuno individual (por pieza) en tortilla hecha a mano (harina o maíz). Relleno de huevo revuelto con tu ingrediente a elegir: tocino, papa, chorizo, jamón, salchicha, chicharrón, frijol, migas o a la mexicana. Se pueden añadir ingredientes extras.",
         descriptionEn:
           "Single breakfast taco on a handmade tortilla (flour or corn). Filled with scrambled eggs and your choice of ingredient: bacon, potato, chorizo, ham, sausage, pork rind, beans, migas, or Mexican style. Extra ingredients can be added.",
-        image: "/images/breackfast-tacos.png",
+        image: "/images/breackfast-tacos.webp",
         customizable: true,
         popular: true,
       },
@@ -42,7 +42,7 @@ export const MENU_DATA = {
           "Burrito ala carta con arroz y frijoles.",
         descriptionEn:
           "Burrito a la carte with rice and beans.",
-        image: "/images/burrito (3).png",
+        image: "/images/burrito (3).webp",
         popular: true,
         customizable: true,
       },
@@ -54,7 +54,7 @@ export const MENU_DATA = {
           "Café auténtico mexicano preparado en olla de barro con piloncillo real, rajas de canela y anís estrella. Caliente y aromático.",
         descriptionEn:
           "Authentic Mexican coffee brewed in a traditional clay pot with real piloncillo sugar, cinnamon sticks, and star anise.",
-        image: "/images/cafe-de-olla.png",
+        image: "/images/cafe-de-olla.webp",
         popular: true,
       },
       {
@@ -65,7 +65,7 @@ export const MENU_DATA = {
           "Arroz, frijoles y cecina.",
         descriptionEn:
           "Rice, beans and cecina.",
-        image: "/images/huevito en salasa.png",
+        image: "/images/huevito en salasa.webp",
         spicy: true,
       },
       {
@@ -76,7 +76,7 @@ export const MENU_DATA = {
           "Huevos de granja revueltos con nopales tiernos salteados, cebolla, jitomate, jalapeño y rebanadas de aguacate fresco.",
         descriptionEn:
           "Farm eggs scrambled with sautéed baby nopales, sweet onions, juicy tomatoes, jalapeño, and fresh sliced avocado.",
-        image: "/images/vegetariano.png",
+        image: "/images/vegetariano.webp",
       },
       {
         id: "b7",
@@ -86,7 +86,7 @@ export const MENU_DATA = {
           "Totopos caseros en salsa roja o verde, cubiertos con dos huevos fritos, crema mexicana, queso fresco y aguacate fresco.",
         descriptionEn:
           "Homemade tortilla chips simmered in red or green salsa, topped with two fried eggs, Mexican cream, queso fresco, and fresh avocado.",
-        image: "/images/chilaquiles-2.png",
+        image: "/images/chilaquiles-finales.webp",
         spicy: true,
         popular: true,
       },
@@ -106,7 +106,7 @@ export const MENU_DATA = {
           "El sándwich definitivo: bolillo tostado con milanesa, jamón, chorizo, huevo, hot dog, queso, aguacate y jalapeños encurtidos.",
         descriptionEn:
           "The ultimate Mexican sandwich: toasted bolillo with milanesa, ham, chorizo, scrambled eggs, hot dog, cheese, avocado, and pickled jalapeños.",
-        image: "/images/torta-cubana.png",
+        image: "/images/torta-cubana.webp",
         popular: true,
       },
     ],
@@ -125,7 +125,7 @@ export const MENU_DATA = {
           "Tres tacos auténticos en tortilla de maíz hecha a mano con tu elección de carne, cilantro, cebolla y salsa de la casa.",
         descriptionEn:
           "Three authentic tacos on handmade corn tortillas with your choice of meat, cilantro, onion, and house salsa.",
-        image: "/images/tacos (2).png",
+        image: "/images/tacos (2).webp",
         customizable: true,
         popular: true,
       },
@@ -269,7 +269,7 @@ export const MENU_DATA = {
           "Tortilla de harina gigante asada a la plancha con queso Oaxaca derretido y tu elección de carne. Servida con crema y guacamole.",
         descriptionEn:
           "Giant grilled flour tortilla with melted Oaxaca cheese and your choice of sizzling grilled meat. Served with crema and guacamole.",
-        image: "/images/quesadilla (2).png",
+        image: "/images/quesadilla (2).webp",
         customizable: true,
         popular: true,
       },
@@ -281,7 +281,7 @@ export const MENU_DATA = {
           "Tres tortillas de maíz fritas rellenas de queso fundido y birria de res deshebrada, servidas con taza de consomé caliente para sumergir.",
         descriptionEn:
           "Three crispy cheese-stuffed corn tortillas filled with slow-cooked shredded beef birria. Served with hot consommé broth for dipping.",
-        image: "/images/quesabirria.png",
+        image: "/images/quesabirria.webp",
         popular: true,
       },
     ],
@@ -300,7 +300,7 @@ export const MENU_DATA = {
           "Crea tu burrito ideal a la carta: elige tu carne, frijoles, arroz, quesos derretidos, verduras frescas y salsas de la casa.",
         descriptionEn:
           "Customize your dream burrito a la carte: choose your meat, beans, rice, melted cheeses, fresh veggies, and house salsas.",
-        image: "/images/burrito (2).png",
+        image: "/images/burrito (2).webp",
         customizable: true,
         popular: true,
       },
@@ -312,7 +312,7 @@ export const MENU_DATA = {
           "Tu burrito favorito servido en plato, acompañado con arroz y frijoles.",
         descriptionEn:
           "Your favorite burrito served on a plate, accompanied by a side of rice and beans.",
-        image: "/images/burrito (3).png",
+        image: "/images/burrito (3).webp",
         customizable: true,
         popular: false,
       },
@@ -332,7 +332,7 @@ export const MENU_DATA = {
           "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa.",
         descriptionEn:
           "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa.",
-        image: "/images/sopes (2).png",
+        image: "/images/sopes (2).webp",
         customizable: true,
         popular: true,
       },
@@ -355,7 +355,7 @@ export const MENU_DATA = {
           "El platillo estrella de la casa: carne a la plancha acompañada de nopales, frijoles de olla, arroz, tortillas hechas a mano y toda la salsa.",
         descriptionEn:
           "The house star dish: grilled meat accompanied by nopales, pot-cooked beans, rice, handmade tortillas, and all the salsa.",
-        image: "/images/mi-zacazonapan.png",
+        image: "/images/mi-zacazonapan.webp",
         popular: true,
       },
     ],
@@ -374,7 +374,7 @@ export const MENU_DATA = {
           "Barbacoa de res cocida a vapor lentamente, profundamente sazonada con hojas de aguacate y chiles. Se deshace en la boca. Por libra o por taco.",
         descriptionEn:
           "Slow steam-cooked shredded beef barbacoa, seasoned with avocado leaves and chiles. Melt-in-your-mouth tender. By the pound or by taco.",
-        image: "/images/barbacoa-de-res.png",
+        image: "/images/barbacoa-de-res.webp",
         popular: true,
       },
       {
@@ -385,7 +385,7 @@ export const MENU_DATA = {
           "Rica barbacoa de chivo los sábados. Carne de chivo cocida a baja temperatura con especias tradicionales. Servida con consomé caliente.",
         descriptionEn:
           "Goat barbacoa available Saturdays only. Slow-cooked with traditional spices and served with hot consommé broth.",
-        image: "/images/BerbacoaDeChivo.png",
+        image: "/images/BerbacoaDeChivo.webp",
         popular: true,
       },
       {
@@ -396,7 +396,7 @@ export const MENU_DATA = {
           "Plato completo con barbacoa de chivo tierna, consomé de garbanzo, cebollitas, cilantro, limón y salsa roja. Sábados únicamente.",
         descriptionEn:
           "Full platter with tender goat barbacoa, chickpea consommé broth, cebollitas, cilantro, lime, and red salsa. Saturdays only.",
-        image: "/images/servido-de-chivo.png",
+        image: "/images/servido-de-chivo.webp",
       },
       {
         id: "ba4",
@@ -424,7 +424,7 @@ export const MENU_DATA = {
           "Caldo de panza de res auténtico simmered en caldo de chile rojo con limón, cebolla, orégano y chiles quebrados. Con tortillas calientes.",
         descriptionEn:
           "Authentic Mexican tripe soup simmered in red chile broth with lime, onion, oregano, and crushed chiles. Served with hot handmade tortillas.",
-        image: "/images/menudo.png",
+        image: "/images/menudo.webp",
         spicy: true,
         popular: true,
       },
@@ -485,7 +485,7 @@ export const MENU_DATA = {
           "Café mexicano tradicional aromático con piloncillo oscuro y canela.",
         descriptionEn:
           "Fragrant traditional Mexican coffee brewed with dark piloncillo and cinnamon stick.",
-        image: "/images/cafe-de-olla.png",
+        image: "/images/cafe-de-olla.webp",
       },
       {
         id: "ex6",
@@ -655,7 +655,7 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🧀",
-    image: "/images/quesabirria.png",
+    image: "/images/quesabirria.webp",
   },
   {
     name: "Quesadilla",
@@ -663,7 +663,7 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🫓",
-    image: "/images/quesadilla (2).png",
+    image: "/images/quesadilla (2).webp",
   },
   {
     name: "Picaditas",
@@ -679,7 +679,7 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🫓",
-    image: "/images/sopes (2).png",
+    image: "/images/sopes (2).webp",
   },
   {
     name: "Bistec Ranchero",
