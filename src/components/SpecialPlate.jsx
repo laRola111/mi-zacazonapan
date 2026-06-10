@@ -85,7 +85,7 @@ export default function SpecialPlate() {
 
               <div className="overflow-hidden bg-[#050403] relative rounded-sm">
                 <img
-                  src="/images/chicharrones.png"
+                  src="/images/chicharrones.webp"
                   alt={lang === "es" ? "Chicharrones de Cerdo" : "Crispy Pork Chicharrones"}
                   className="w-full h-auto max-h-[420px] object-contain block select-none group-hover:scale-103 transition-transform duration-700 filter saturate-110"
                   loading="lazy"
