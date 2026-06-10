@@ -162,6 +162,14 @@ const translations = {
       madeWith: "Hecho con",
       in: "en Austin, TX",
     },
+    // Special / Dish of the Day
+    special: {
+      overline: "Especial del Día",
+      title: "El Plato del Día",
+      name: "Chicharrones de Cerdo Crujientes",
+      desc: "Nuestros deliciosos chicharrones de cerdo preparados al estilo tradicional. Fritos a la perfección para lograr esa textura dorada y crujiente por fuera, y tierna por dentro. ¡Acompañados con limones frescos y nuestras salsas artesanales de la casa!",
+      badge: "¡Pídelos hoy mismo!",
+    },
   },
 
   // ─────────────────────────────────────────────
@@ -323,6 +331,14 @@ const translations = {
       rights: (year) => `© ${year} Mi Zacazonapan. All rights reserved.`,
       madeWith: "Made with",
       in: "in Austin, TX",
+    },
+    // Special / Dish of the Day
+    special: {
+      overline: "Daily Special",
+      title: "Dish of the Day",
+      name: "Crispy Pork Chicharrones",
+      desc: "Our delicious pork chicharrones prepared in the traditional style. Fried to perfection for a golden, extra-crunchy texture on the outside, and tender on the inside. Served with fresh limes and our artisanal house salsas!",
+      badge: "Order yours today!",
     },
   },
 };

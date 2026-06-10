@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Flame } from "lucide-react";
 import { MEATS_DATA, PLATILLOS_DATA, TOPPINGS_DATA } from "../data/menu";
@@ -12,17 +12,19 @@ export default function MeatGrill() {
   const leftCol  = MEATS_DATA.slice(0, 7);
   const rightCol = MEATS_DATA.slice(7);
 
-  const sparks = useMemo(
-    () =>
+  // Generate random sparks only on the client to avoid SSR hydration mismatch
+  const [sparks, setSparks] = useState([]);
+  useEffect(() => {
+    setSparks(
       [...Array(15)].map((_, i) => ({
         id: i,
         left: `${Math.random() * 90 + 5}%`,
         delay: Math.random() * 4,
         size: Math.random() * 4 + 2,
         duration: Math.random() * 3 + 2,
-      })),
-    []
-  );
+      }))
+    );
+  }, []);
 
   return (
     <section

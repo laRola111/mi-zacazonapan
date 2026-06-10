@@ -5,6 +5,7 @@ import Hero from "../components/Hero";
 import MenuSection from "../components/MenuSection";
 import MeatGrill from "../components/MeatGrill";
 import HandmadeTortillas from "../components/HandmadeTortillas";
+import SpecialPlate from "../components/SpecialPlate";
 import Contact from "../components/Contact";
 import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
@@ -119,6 +120,9 @@ export default function Home() {
 
         {/* Tipos de carne grill section */}
         <MeatGrill />
+
+        {/* Dish of the Day Showcase Section */}
+        <SpecialPlate />
 
         {/* Handmade tortillas showcase */}
         <HandmadeTortillas />
