@@ -108,8 +108,6 @@ export const MENU_DATA = {
           "Telera bread, mayonnaise with dried beef (cecina), pastor, chorizo, ham, grilled sausage, grilled pineapple, lettuce, tomato, avocado, and asadero cheese.",
         image: "/images/torta-cubana.webp",
         popular: true,
-        customLabel: "Taquizas a Domicilio",
-        customLabelEn: "Taco Catering / Delivery",
       },
     ],
   },

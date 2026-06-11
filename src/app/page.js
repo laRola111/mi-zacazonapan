@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AudioPlayer from "../components/AudioPlayer";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeSection, setActiveSection] = useState("inicio");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -129,6 +129,43 @@ export default function Home() {
 
         {/* Integrated contact details & maps */}
         <Contact />
+
+        {/* Taquizas a Domicilio Promo Section */}
+        <section className="relative py-16 bg-[#0c0a09] border-t-2 border-mexican-gold/30 overflow-hidden text-center">
+          {/* Subtle decorative glowing background */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(227,27,35,0.15)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-mexican-gold/30 pointer-events-none m-4" />
+          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-mexican-gold/30 pointer-events-none m-4" />
+          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-mexican-gold/30 pointer-events-none m-4" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-mexican-gold/30 pointer-events-none m-4" />
+
+          <div className="max-w-4xl mx-auto px-6 relative z-10">
+            <span className="text-[#F9E014] text-xs font-condensed uppercase tracking-[0.25em] font-extrabold block mb-2">
+              {lang === "es" ? "Servicio Especial de Catering" : "Special Catering Service"}
+            </span>
+            
+            <h2 
+              style={{ fontFamily: '"Sancreek", cursive' }}
+              className="text-3xl sm:text-4xl md:text-5xl text-mexican-cream uppercase tracking-wide mb-6 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.9)]"
+            >
+              {lang === "es" ? "¡También tenemos taquizas a domicilio!" : "We also offer taco catering for your events!"}
+            </h2>
+
+            <p className="text-mexican-cream/80 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-8 font-sans">
+              {lang === "es"
+                ? "Llevamos todo el sabor auténtico de Mi Zacazonapan a tus fiestas, reuniones y eventos especiales en Austin y alrededores. Tortillas hechas a mano en el momento, guisados calientitos y salsas artesanales."
+                : "We bring the true authentic taste of Mi Zacazonapan directly to your parties, meetings, and special events in Austin and surroundings. Freshly hand-pressed tortillas, hot fillings, and artisanal salsas."}
+            </p>
+
+            <a
+              href="tel:5129098530"
+              className="inline-flex items-center gap-2 bg-mexican-red hover:bg-mexican-gold hover:text-mexican-black text-mexican-cream px-8 py-4 border-2 border-mexican-gold shadow-[0_6px_20px_rgba(227,27,35,0.4)] transition-all duration-300 font-bold uppercase tracking-wider text-xs sm:text-sm hover:scale-105"
+            >
+              <span>📞</span>
+              {lang === "es" ? "Cotizar Evento: (512) 909-8530" : "Get a Quote: (512) 909-8530"}
+            </a>
+          </div>
+        </section>
       </main>
 
       {/* Floating Premium Background Music Player */}
