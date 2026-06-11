@@ -103,11 +103,13 @@ export const MENU_DATA = {
         name: "Torta Cubana",
         nameEn: "Cuban Torta",
         description:
-          "El sándwich definitivo: bolillo tostado con milanesa, jamón, chorizo, huevo, hot dog, queso, aguacate y jalapeños encurtidos.",
+          "Telera, mayonesa con cecina, pastor, chorizo, jamón, salchicha asada, piña asada, lechuga, jitomate, aguacate y queso asadero.",
         descriptionEn:
-          "The ultimate Mexican sandwich: toasted bolillo with milanesa, ham, chorizo, scrambled eggs, hot dog, cheese, avocado, and pickled jalapeños.",
+          "Telera bread, mayonnaise with dried beef (cecina), pastor, chorizo, ham, grilled sausage, grilled pineapple, lettuce, tomato, avocado, and asadero cheese.",
         image: "/images/torta-cubana.webp",
         popular: true,
+        customLabel: "Taquizas a Domicilio",
+        customLabelEn: "Taco Catering / Delivery",
       },
     ],
   },
@@ -122,10 +124,10 @@ export const MENU_DATA = {
         name: "Tacos de Carne",
         nameEn: "Street Tacos",
         description:
-          "Tres tacos auténticos en tortilla de maíz hecha a mano con tu elección de carne, cilantro, cebolla y salsa de la casa.",
+          "Tenemos diferentes tipos de carnes, tortilla hecha a mano, taco individual.",
         descriptionEn:
-          "Three authentic tacos on handmade corn tortillas with your choice of meat, cilantro, onion, and house salsa.",
-        image: "/images/tacos (2).webp",
+          "We offer a variety of meats, handmade tortillas, individual tacos.",
+        image: "/images/tacos-portada.webp",
         customizable: true,
         popular: true,
       },
@@ -695,6 +697,6 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🐷",
-    image: null,
+    image: "/images/chicharrones.webp",
   },
 ];

@@ -155,6 +155,13 @@ export default function MenuSection() {
                         <p className="text-[#F8F1E5]/60 text-xs font-light leading-relaxed flex-1 line-clamp-3">
                           {displayDesc}
                         </p>
+                        {item.customLabel && (
+                          <div className="mt-3">
+                            <span className="inline-block bg-[#E31B23] text-[#F9E014] font-condensed text-[10px] uppercase px-3 py-1 tracking-widest border border-[#F9E014] font-bold">
+                              {lang === "es" ? item.customLabel : item.customLabelEn || item.customLabel}
+                            </span>
+                          </div>
+                        )}
                       </div>
 
                       {/* Gold top accent line on hover */}

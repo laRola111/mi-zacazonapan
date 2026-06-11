@@ -122,7 +122,7 @@ export default function Home() {
         <MeatGrill />
 
         {/* Dish of the Day Showcase Section */}
-        <SpecialPlate />
+        {/* <SpecialPlate /> */}
 
         {/* Handmade tortillas showcase */}
         <HandmadeTortillas />
