@@ -687,7 +687,7 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🥩",
-    image: null,
+    image: "/images/bistec-ranchero.webp",
   },
   {
     name: "Chicharrón",
