@@ -74,19 +74,19 @@ export default function MeatGrill() {
           <Flame className="w-4 h-4 animate-bounce" />
           {t.grill.overline}
         </div>
-        <h2 className="mexican-title text-5xl sm:text-6xl md:text-7xl uppercase">
+        <h2 className="mexican-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase">
           {t.grill.title}
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 py-14 relative z-20">
-        <p className="font-condensed text-[#F8F1E5]/55 text-sm tracking-wide max-w-2xl mx-auto text-center mb-12 uppercase">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 py-10 sm:py-14 relative z-20">
+        <p className="font-condensed text-[#F8F1E5]/55 text-xs sm:text-sm tracking-wide max-w-2xl mx-auto text-center mb-10 sm:mb-12 uppercase">
           {t.grill.subtitle}
         </p>
         <div className="w-40 h-[2px] bg-gradient-to-r from-transparent via-[#E31B23] to-transparent mx-auto mb-14" />
 
         {/* ── TWO COLUMN MEAT LIST — mirrors the physical menu layout ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto mb-16">
           {/* LEFT COLUMN */}
           <div className="border border-[#6B3E1F]/60 bg-[#0d0c0c]">
             {/* Column header */}
@@ -158,7 +158,7 @@ export default function MeatGrill() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto border-double border-4 border-[#F9E014] bg-[#0d0c0c] p-8 text-center relative"
+          className="max-w-3xl mx-auto border-double border-4 border-[#F9E014] bg-[#0d0c0c] p-5 sm:p-8 text-center relative"
         >
           <div className="absolute top-2 left-2  w-4 h-4 border-t border-l border-[#F9E014]" />
           <div className="absolute top-2 right-2 w-4 h-4 border-t border-r border-[#F9E014]" />
@@ -187,7 +187,7 @@ export default function MeatGrill() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto">
             {PLATILLOS_DATA.map((p, i) => (
               <motion.div
                 key={p.name}
@@ -195,10 +195,10 @@ export default function MeatGrill() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="flex flex-col items-center bg-[#0d0c0c] border border-[#6B3E1F]/60 hover:border-[#F9E014]/60 transition-all duration-300 overflow-hidden group"
+                className="flex flex-col items-center bg-[#0d0c0c] border border-[#6B3E1F]/60 hover:border-[#F9E014]/60 transition-all duration-300 overflow-hidden group cursor-pointer"
               >
                 {p.image ? (
-                  <div className="w-full h-28 overflow-hidden">
+                  <div className="w-full h-24 sm:h-28 overflow-hidden">
                     <img
                       src={p.image}
                       alt={lang === "en" && p.nameEn ? p.nameEn : p.name}
@@ -211,10 +211,15 @@ export default function MeatGrill() {
                     <span className="text-4xl">{p.icon}</span>
                   </div>
                 )}
-                <div className="p-3 text-center">
-                  <p className="font-oswald text-[#F9E014] text-xs uppercase tracking-wide leading-tight">
+                <div className="p-2 sm:p-3 text-center w-full">
+                  <p className="font-oswald text-[#F9E014] text-[10px] sm:text-xs uppercase tracking-wide leading-tight">
                     {lang === "en" && p.nameEn ? p.nameEn : p.name}
                   </p>
+                  {p.description && (
+                    <p className="font-condensed text-[#F8F1E5]/50 text-[9px] sm:text-[10px] uppercase tracking-wide leading-tight mt-1 line-clamp-2 hidden sm:block">
+                      {lang === "en" && p.descriptionEn ? p.descriptionEn : p.description}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -232,7 +237,7 @@ export default function MeatGrill() {
             </h3>
           </div>
 
-          <div className="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+          <div className="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 sm:gap-3">
             {TOPPINGS_DATA.map((tp, i) => (
               <motion.div
                 key={tp.name}

@@ -17,7 +17,7 @@ export default function Contact() {
   return (
     <section
       id="contacto"
-      className="relative py-24 bg-mexican-black text-mexican-cream"
+      className="relative py-16 sm:py-24 bg-mexican-black text-mexican-cream"
     >
       {/* Background radial overlays */}
       <div className="absolute inset-0 bg-[#070605]" />
@@ -140,7 +140,7 @@ export default function Contact() {
               <div className="absolute bottom-2 right-2 w-3 h-3 border-b border-r border-mexican-gold" />
 
               {/* Map container */}
-              <div className="w-full min-h-[280px] h-72 sm:h-96 overflow-hidden border border-[#6B3E1F] bg-mexican-black relative">
+              <div className="w-full min-h-[260px] h-64 sm:h-80 md:h-96 overflow-hidden border border-[#6B3E1F] bg-mexican-black relative">
                 <iframe
                   title="Google Map Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.713962635955!2d-97.71960252399222!3d30.387532374753067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cc56b50adccb%3A0xc3f61ea0e62ea4ec!2s2601%20W%20Braker%20Ln%2C%20Austin%2C%20TX%2078758!5e0!3m2!1ses-419!2sus!4v1716656730000!5m2!1ses-419!2sus"

@@ -30,7 +30,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden bg-mexican-black"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-12 sm:pt-24 sm:pb-16 overflow-hidden bg-mexican-black"
     >
       {/* Cinematic Ambient Background */}
       <div className="absolute inset-0 bg-gradient-to-t from-mexican-black via-mexican-black/60 to-mexican-black z-10" />
@@ -84,7 +84,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative max-w-7xl mx-auto px-4 md:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-30">
+      <div className="relative max-w-7xl mx-auto px-4 md:px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center z-30">
 
         {/* Left Side: Brand Text & CTAs */}
         <div className="col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -105,7 +105,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mexican-title text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold uppercase leading-[1.1] tracking-wide mb-6"
+            className="mexican-title text-3xl sm:text-4xl md:text-5xl md:text-6xl xl:text-7xl font-extrabold uppercase leading-[1.1] tracking-wide mb-4 sm:mb-6"
           >
             {t.hero.title1} <br />
             <span className="text-mexican-red drop-shadow-[2px_2px_0px_rgba(244,196,48,1)]">
@@ -120,7 +120,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.9 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-mexican-cream text-base md:text-lg lg:text-xl font-sans max-w-xl mb-8 leading-relaxed font-light"
+            className="text-mexican-cream text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-xl mb-6 sm:mb-8 leading-relaxed font-light"
           >
             {t.hero.subtitle}
           </motion.p>
@@ -130,13 +130,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto"
           >
             {/* View Menu */}
             <a
               href="#breakfast"
               onClick={scrollToMenu}
-              className="flex items-center justify-center gap-2 bg-mexican-gold text-mexican-black font-extrabold px-8 py-4 border-2 border-mexican-black hover:bg-mexican-gold/90 hover:scale-105 transition-all duration-300 shadow-[0_5px_15px_rgba(244,196,48,0.4)] uppercase text-xs sm:text-sm tracking-wider"
+              className="flex items-center justify-center gap-2 bg-mexican-gold text-mexican-black font-extrabold px-6 sm:px-8 py-4 border-2 border-mexican-black hover:bg-mexican-gold/90 hover:scale-105 transition-all duration-300 shadow-[0_5px_15px_rgba(244,196,48,0.4)] uppercase text-xs sm:text-sm tracking-wider"
             >
               <ShoppingBag className="w-4 h-4" />
               {t.hero.cta1}
@@ -145,7 +145,7 @@ export default function Hero() {
             {/* Call Now */}
             <a
               href="tel:5129098530"
-              className="flex items-center justify-center gap-2 bg-mexican-black text-mexican-cream font-bold px-8 py-4 border border-mexican-gold/50 hover:border-mexican-gold hover:bg-mexican-red/10 hover:scale-105 transition-all duration-300 uppercase text-xs sm:text-sm tracking-wider"
+              className="flex items-center justify-center gap-2 bg-mexican-black text-mexican-cream font-bold px-6 sm:px-8 py-4 border border-mexican-gold/50 hover:border-mexican-gold hover:bg-mexican-red/10 hover:scale-105 transition-all duration-300 uppercase text-xs sm:text-sm tracking-wider"
             >
               <Phone className="w-4 h-4 text-mexican-gold" />
               {t.hero.cta2}
@@ -168,8 +168,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Side: Glowing Rotational Taco Graphic */}
-        <div className="col-span-1 lg:col-span-5 flex justify-center items-center relative py-6">
+        {/* Right Side: Glowing Rotational Taco Graphic - hidden on small, visible on lg+ */}
+        <div className="hidden lg:flex col-span-1 lg:col-span-5 justify-center items-center relative py-6">
           {/* Saturated Golden Background Aura */}
           <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] bg-mexican-gold/25 rounded-full blur-[80px] -z-10 animate-pulse pointer-events-none" />
           <div className="absolute w-[200px] h-[200px] bg-mexican-red/35 rounded-full blur-[50px] -z-10 pointer-events-none" />

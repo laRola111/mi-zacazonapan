@@ -334,6 +334,8 @@ export const MENU_DATA = {
   sopes: {
     title: "Sopes / Picaditas",
     subtitle: "Masa artesanal con todos los toppings",
+    subtitleEs: "Los sopes van servidos con arroz y frijoles · Las picaditas siempre llevan salsa de molcajete y la carne de tu preferencia",
+    subtitleEn: "Sopes served with rice and beans · Picaditas always come with molcajete salsa and your choice of meat",
     items: [
       {
         id: "sp1",

@@ -58,7 +58,7 @@ export default function MenuSection() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`flex items-center gap-1.5 px-3 sm:px-4 py-2 font-condensed text-xs uppercase tracking-wider transition-all duration-300 border-2 whitespace-nowrap ${
+                className={`flex items-center gap-1.5 px-3 sm:px-4 py-2.5 font-condensed text-[11px] sm:text-xs uppercase tracking-wider transition-all duration-300 border-2 whitespace-nowrap ${
                   isSelected
                     ? "bg-[#E31B23] text-[#F9E014] border-[#F9E014] shadow-[0_0_18px_rgba(227,27,35,0.5)] scale-105"
                     : "bg-transparent text-[#F8F1E5]/70 border-[#6B3E1F] hover:border-[#F9E014]/60 hover:text-[#F9E014]"
@@ -98,11 +98,18 @@ export default function MenuSection() {
                   {currentCategoryData.subtitle}
                 </p>
               )}
+              {(currentCategoryData?.subtitleEs || currentCategoryData?.subtitleEn) && (
+                <div className="mt-4 max-w-2xl mx-auto px-4 py-3 border border-[#F9E014]/30 bg-[#F9E014]/5">
+                  <p className="font-condensed text-[#F9E014] text-xs sm:text-sm uppercase tracking-wide leading-relaxed">
+                    🫓 {lang === "en" && currentCategoryData.subtitleEn ? currentCategoryData.subtitleEn : currentCategoryData.subtitleEs}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* ── PHOTO CARDS GRID (items WITH images) ── */}
             {currentCategoryData.items.filter(item => item.image).length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
                 {currentCategoryData.items.filter(item => item.image).map((item, idx) => {
                   const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
                   const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
@@ -117,7 +124,7 @@ export default function MenuSection() {
                       className="relative flex flex-col bg-[#111010] border border-[#6B3E1F]/70 hover:border-[#F9E014]/60 transition-all duration-300 group overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
                     >
                       {/* Image */}
-                      <div className="relative h-52 overflow-hidden bg-[#0d0c0c] shrink-0">
+                      <div className="relative h-48 sm:h-52 overflow-hidden bg-[#0d0c0c] shrink-0">
                         <img
                           src={item.image}
                           alt={displayName}
@@ -148,11 +155,11 @@ export default function MenuSection() {
                       </div>
 
                       {/* Body */}
-                      <div className="flex flex-col flex-1 p-4 pt-3">
-                        <h3 className="dish-title text-lg sm:text-xl uppercase leading-tight mb-2 line-clamp-2">
+                      <div className="flex flex-col flex-1 p-3 sm:p-4 pt-3">
+                        <h3 className="dish-title text-base sm:text-lg md:text-xl uppercase leading-tight mb-1.5 sm:mb-2 line-clamp-2">
                           {displayName}
                         </h3>
-                        <p className="text-[#F8F1E5]/60 text-xs font-light leading-relaxed flex-1 line-clamp-3">
+                        <p className="text-[#F8F1E5]/60 text-[11px] sm:text-xs font-light leading-relaxed flex-1 line-clamp-3">
                           {displayDesc}
                         </p>
                         {item.customLabel && (
@@ -178,7 +185,7 @@ export default function MenuSection() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
-                className="max-w-4xl mx-auto border-double border-4 border-[#6B3E1F]/60 bg-[#0d0c0c] p-6 sm:p-10 relative overflow-hidden"
+                className="max-w-4xl mx-auto border-double border-4 border-[#6B3E1F]/60 bg-[#0d0c0c] p-4 sm:p-6 md:p-10 relative overflow-hidden"
               >
                 {/* Decorative gold corners */}
                 <div className="absolute top-2 left-2 w-4 h-4 border-t border-l border-[#F9E014]/40" />
@@ -195,7 +202,7 @@ export default function MenuSection() {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-4 sm:gap-y-5">
                   {currentCategoryData.items.filter(item => !item.image).map((item) => {
                     const displayName = lang === "en" && item.nameEn ? item.nameEn : item.name;
                     const displayDesc = lang === "en" && item.descriptionEn ? item.descriptionEn : item.description;
