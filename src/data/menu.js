@@ -306,6 +306,17 @@ export const MENU_DATA = {
       },
       {
         id: "bu2",
+        name: "Burrito de Fajita de Res",
+        nameEn: "Beef Fajita Burrito",
+        description:
+          "Burrito gigante de harina relleno de jugosa fajita de res a la plancha, cebolla y jalapeño asado, frijoles y arroz.",
+        descriptionEn:
+          "Giant flour burrito stuffed with juicy grilled beef fajita, onion, roasted jalapeño, beans, and rice.",
+        image: "/images/burrito-fajita-de-res.webp",
+        popular: true,
+      },
+      {
+        id: "bu3",
         name: "Plato de Burrito",
         nameEn: "Burrito Platter",
         description:
@@ -329,9 +340,9 @@ export const MENU_DATA = {
         name: "Sopes Surtidos",
         nameEn: "Sopes Trio",
         description:
-          "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa.",
+          "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa. Pueden ir servidos con arroz y frijoles.",
         descriptionEn:
-          "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa.",
+          "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa. Can be served with rice and beans.",
         image: "/images/sopes (2).webp",
         customizable: true,
         popular: true,
@@ -341,10 +352,10 @@ export const MENU_DATA = {
         name: "Picaditas",
         nameEn: "Picaditas",
         description:
-          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, salsa verde o roja, queso fresco, cebolla y crema.",
+          "Tres gorditas de masa de maíz pellizcadas en los bordes, cubiertas con frijoles, queso fresco, cebolla y crema. Siempre servidas con salsa de molcajete y la carne de su preferencia.",
         descriptionEn:
-          "Three thick handmade corn masa shells pinched at the edges, layered with refried beans, salsa, crumbled queso fresco, onions, and crema.",
-        image: null,
+          "Three thick handmade corn masa shells pinched at the edges, layered with beans, crumbled queso fresco, onions, and crema. Always served with molcajete salsa and your choice of meat.",
+        image: "/images/picaditas-finales.webp",
         spicy: true,
       },
       {
@@ -668,16 +679,16 @@ export const PLATILLOS_DATA = [
   {
     name: "Picaditas",
     nameEn: "Picaditas",
-    description: "A la carta · Arroz y frijoles · Tortillas a mano",
-    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    description: "Siempre servidas con salsa de molcajete y la carne de su preferencia · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "Always served with molcajete salsa and your choice of meat · Rice & beans · Handmade tortillas",
     icon: "🌽",
-    image: null,
+    image: "/images/picaditas-finales.webp",
   },
   {
     name: "Sopes",
     nameEn: "Sopes",
-    description: "A la carta · Arroz y frijoles · Tortillas a mano",
-    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    description: "Pueden ir servidos con arroz y frijoles · Tortillas a mano",
+    descriptionEn: "Can be served with rice & beans · Handmade tortillas",
     icon: "🫓",
     image: "/images/sopes (2).webp",
   },
@@ -695,6 +706,22 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🐷",
-    image: "/images/chicharrones.webp",
+    image: "/images/chicharron.webp",
+  },
+  {
+    name: "Alambre Campechano",
+    nameEn: "Campechano Alambre",
+    description: "Preparado con tocino, cecina, chorizo, pico de gallo cocido, cebolla, chile morrón y jitomate",
+    descriptionEn: "Prepared with bacon, cecina, chorizo, cooked pico de gallo, onion, bell pepper, and tomato",
+    icon: "🥘",
+    image: "/images/alambre-campechano.webp",
+  },
+  {
+    name: "Ensalada de Fajitas de Pollo",
+    nameEn: "Chicken Fajita Salad",
+    description: "Fajitas de pollo marinadas a la plancha servidas sobre una cama de lechuga fresca, jitomate, aguacate y aderezo",
+    descriptionEn: "Grilled marinated chicken fajitas served over a bed of fresh lettuce, tomato, avocado, and dressing",
+    icon: "🥗",
+    image: "/images/ensalada-de-fajitas-de-pollo.webp",
   },
 ];
