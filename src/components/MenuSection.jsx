@@ -98,13 +98,6 @@ export default function MenuSection() {
                   {currentCategoryData.subtitle}
                 </p>
               )}
-              {(currentCategoryData?.subtitleEs || currentCategoryData?.subtitleEn) && (
-                <div className="mt-4 max-w-2xl mx-auto px-4 py-3 border border-[#F9E014]/30 bg-[#F9E014]/5">
-                  <p className="font-condensed text-[#F9E014] text-xs sm:text-sm uppercase tracking-wide leading-relaxed">
-                    🫓 {lang === "en" && currentCategoryData.subtitleEn ? currentCategoryData.subtitleEn : currentCategoryData.subtitleEs}
-                  </p>
-                </div>
-              )}
             </div>
 
             {/* ── PHOTO CARDS GRID (items WITH images) ── */}

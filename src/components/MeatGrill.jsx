@@ -215,9 +215,9 @@ export default function MeatGrill() {
                   <p className="font-oswald text-[#F9E014] text-[10px] sm:text-xs uppercase tracking-wide leading-tight">
                     {lang === "en" && p.nameEn ? p.nameEn : p.name}
                   </p>
-                  {p.description && (
-                    <p className="font-condensed text-[#F8F1E5]/50 text-[9px] sm:text-[10px] uppercase tracking-wide leading-tight mt-1 line-clamp-2 hidden sm:block">
-                      {lang === "en" && p.descriptionEn ? p.descriptionEn : p.description}
+                  {p.showSubtitle && (
+                    <p className="font-condensed text-[#F9E014]/70 text-[9px] sm:text-[10px] uppercase tracking-wide leading-tight mt-1 line-clamp-2">
+                      {lang === "en" && p.subtitleEn ? p.subtitleEn : p.subtitle}
                     </p>
                   )}
                 </div>
