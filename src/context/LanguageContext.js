@@ -78,7 +78,7 @@ const translations = {
       callout:
         "🫓 Tortillas de maíz hechas a mano",
       calloutDesc:
-        "Cada tortilla es elaborada a mano en nuestra cocina al momento de tu orden. Masa de maíz criollo nixtamalizado, prensada y cocinada en comal caliente. El auténtico sabor que hace único cada taco y platillo de Mi Zacazonapan.",
+        "Cada tortilla es elaborada a mano en nuestra cocina al momento de tu orden. Masa de maíz nixtamalizado, prensada y cocinada en comal caliente. El auténtico sabor que hace único cada taco y platillo de Mi Zacazonapan.",
     },
 
     // Handmade Tortillas

@@ -88,8 +88,7 @@ export default function MenuSection() {
                 {lang === "es" ? "CATEGORÍA" : "CATEGORY"}
               </span>
               <h3
-                style={{ fontFamily: '"Sancreek", cursive' }}
-                className="text-3xl sm:text-4xl text-[#F9E014] uppercase tracking-wider drop-shadow-[1px_2px_0px_rgba(0,0,0,0.85)] inline-block border-b border-[#6B3E1F] pb-3"
+                className="font-sancreek text-3xl sm:text-4xl text-[#F9E014] uppercase tracking-wider drop-shadow-[1px_2px_0px_rgba(0,0,0,0.85)] inline-block border-b border-[#6B3E1F] pb-3"
               >
                 {categories.find(c => c.id === selectedCategory)?.label}
               </h3>

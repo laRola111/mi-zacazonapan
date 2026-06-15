@@ -145,8 +145,7 @@ export default function Home() {
             </span>
             
             <h2 
-              style={{ fontFamily: '"Sancreek", cursive' }}
-              className="text-3xl sm:text-4xl md:text-5xl text-mexican-cream uppercase tracking-wide mb-6 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.9)]"
+              className="font-sancreek text-3xl sm:text-4xl md:text-5xl text-mexican-cream uppercase tracking-wide mb-6 drop-shadow-[2px_3px_0px_rgba(0,0,0,0.9)]"
             >
               {lang === "es" ? "¡También tenemos taquizas a domicilio!" : "We also offer taco catering for your events!"}
             </h2>

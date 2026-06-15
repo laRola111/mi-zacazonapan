@@ -119,9 +119,9 @@ body {
      6px  6px 8px rgba(var(--mexican-cream-rgb), 0.3);
 }
 
-/* ── Sancreek — dish card titles ─────────────────────────── */
+/* ── Sancreek — dish card titles (responsive) ─────────────────────────── */
 .dish-title {
-  font-family: "Sancreek", "Smokum", Georgia, serif;
+  font-family: "Rye", Georgia, serif;
   color: var(--mexican-gold);
   letter-spacing: 0.05em;
   text-shadow:
@@ -130,6 +130,12 @@ body {
     -1px  1px 0 var(--mexican-black),
      1px  1px 0 var(--mexican-black),
      2px  3px 0 rgba(var(--mexican-cream-rgb), 0.2);
+}
+
+@media (min-width: 768px) {
+  .dish-title {
+    font-family: "Sancreek", "Smokum", Georgia, serif;
+  }
 }
 
 /* ── Barlow Condensed — ingredient / meat lists ───────────── */
@@ -157,7 +163,10 @@ body {
 
 /* Western font utility for inline use */
 .font-western  { font-family: "Rye", Georgia, serif; }
-.font-sancreek { font-family: "Sancreek", "Smokum", Georgia, serif; }
+.font-sancreek { font-family: "Rye", Georgia, serif; }
+@media (min-width: 768px) {
+  .font-sancreek { font-family: "Sancreek", "Smokum", Georgia, serif; }
+}
 .font-smokum   { font-family: "Smokum", Georgia, serif; }
 .font-display  { font-family: "Luckiest Guy", "Impact", sans-serif; }
 

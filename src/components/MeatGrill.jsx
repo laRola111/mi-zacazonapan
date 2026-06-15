@@ -227,6 +227,7 @@ export default function MeatGrill() {
         </div>
 
         {/* ── TOPPINGS / INGREDIENTES ── */}
+        {/*
         <div className="mt-16 mb-4">
           <div className="text-center mb-8">
             <span className="font-condensed text-[#E31B23] text-[10px] sm:text-xs uppercase tracking-[0.25em] block mb-2">
@@ -255,6 +256,7 @@ export default function MeatGrill() {
             ))}
           </div>
         </div>
+        */}
 
       </div>
     </section>

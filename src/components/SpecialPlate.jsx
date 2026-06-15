@@ -48,8 +48,7 @@ export default function SpecialPlate() {
 
             {/* Dish Name */}
             <h3 
-              style={{ fontFamily: '"Sancreek", cursive' }}
-              className="text-2xl sm:text-3xl lg:text-4xl text-mexican-gold uppercase tracking-wider mb-4 drop-shadow-[1px_2px_0px_rgba(0,0,0,0.85)]"
+              className="font-sancreek text-2xl sm:text-3xl lg:text-4xl text-mexican-gold uppercase tracking-wider mb-4 drop-shadow-[1px_2px_0px_rgba(0,0,0,0.85)]"
             >
               {t.special.name}
             </h3>
