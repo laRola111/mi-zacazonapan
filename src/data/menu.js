@@ -714,7 +714,7 @@ export const PLATILLOS_DATA = [
     description: "A la carta · Arroz y frijoles · Tortillas a mano",
     descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
     icon: "🐷",
-    // image: "/images/chicharron.webp",
+    image: "/images/chicharrones-finales.webp",
   },
   {
     name: "Alambre Campechano",
