@@ -11,6 +11,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { Flame, Heart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import AudioPlayer from "../components/AudioPlayer";
+import VideoSection from "../components/VideoSection";
 
 export default function Home() {
   const { t, lang } = useLanguage();
@@ -112,6 +113,9 @@ export default function Home() {
       <main className="flex-grow">
         {/* Cinematic landing hero */}
         <Hero />
+
+        {/* Video — second thing shown after hero */}
+        <VideoSection />
 
         {/* Dynamic menu — all sections */}
         <div id="breakfast">
