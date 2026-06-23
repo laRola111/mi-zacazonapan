@@ -345,7 +345,7 @@ export const MENU_DATA = {
           "Tres sopes caseros crujientes con frijoles, tu elección de carne, lechuga, jitomate, crema, queso fresco y salsa picosa. Pueden ir servidos con arroz y frijoles.",
         descriptionEn:
           "Three crispy handmade sopes with beans, choice of meat, lettuce, tomato, cream, fresh cheese, and spicy salsa. Can be served with rice and beans.",
-        image: "/images/sopes (2).webp",
+        image: "/images/sopes-finales.png",
         customizable: true,
         popular: true,
       },
@@ -698,7 +698,7 @@ export const PLATILLOS_DATA = [
     subtitle: "Pueden ir servidos con arroz y frijoles",
     subtitleEn: "Can be served with rice and beans",
     icon: "🫓",
-    image: "/images/sopes (2).webp",
+    image: "/images/sopes-finales.png",
   },
   {
     name: "Bistec Ranchero",
@@ -731,5 +731,13 @@ export const PLATILLOS_DATA = [
     descriptionEn: "Grilled marinated chicken fajitas served over a bed of fresh lettuce, tomato, avocado, and dressing",
     icon: "🥗",
     image: "/images/ensalada-de-fajitas-de-pollo.webp",
+  },
+  {
+    name: "Costillas de Puerco",
+    nameEn: "Pork Ribs",
+    description: "A la carta · Arroz y frijoles · Tortillas a mano",
+    descriptionEn: "A la carte · Rice & beans · Handmade tortillas",
+    icon: "🍖",
+    image: "/images/costillas-de-puerco.png",
   },
 ];
